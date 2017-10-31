@@ -1,26 +1,16 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom'
 import './App.css';
-import AppBarEG from './AppBarEG';
-import TaxonTree from './TaxonTree';
+import TaxonList from './TaxonList'
 
 class App extends Component {
-    constructor() {
-        super();
-        this.state={items:[]};
-    }
-
-    componentDidMount(){
-        fetch(`http://it-webadbtest01.it.ntnu.no/artskartwebapi2/api/data/GetTaxonTree?parentTaxonId=0`)
-            .then(result=>result.json())
-            .then(items=>this.setState({items}))
-    }
 
   render() {
     return (
       <div className="App">
-          <AppBarEG/>
-          <TaxonTree
-          items={this.state.items}/>
+          <BrowserRouter>
+              <Route path="/taxon/:taxon" exact component={TaxonList} />
+          </BrowserRouter>
       </div>
     );
   }
