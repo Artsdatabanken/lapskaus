@@ -4,11 +4,8 @@ import TaxonTree from './TaxonTree';
 import TaxonCard from "./TaxonCard";
 
 class TaxonList extends React.Component {
-    constructor({ history, match }) {
-        super();
-        this.state={
-            items:[]
-        };
+    state={
+      items:[]
     }
 
     componentWillReceiveProps(nextProps) {
