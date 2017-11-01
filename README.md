@@ -12,8 +12,8 @@
 
 Brief description
 
-* [Demo](http://outgoing-front.surge.sh/)
-* [Storybook](http://outgoing-front.surge.sh/storybook)
+* [Demo](http://lapskaus.surge.sh/)
+* [Storybook](http://lapskaus.surge.sh/storybook)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
