@@ -1,0 +1,16 @@
+{
+  "ID": "MapLayer_SnowMakingPotential7",
+  "Layers": "SnowMakingPotential7",
+  "Name": "Snøproduksjons potensial ved -7°C",
+  "ServiceUrl": "http://gridwms.nve.no/WMS_server/wms_server.aspx?VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:32633&FORMAT=image/png&",
+  "ServiceType": "wms",
+  "Clickable": false,
+  "InfoContent": {},
+  "Metadata": 307,
+  "Active": false,
+  "LegendType": "Grid",
+  "groupId": "TGklimaSnowAmounts",
+  "groupName": "Snømengde",
+  "imageUrl": "http://gridwms.nve.no/WMS_server/wms_server.aspx?VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:32633&FORMAT=image/png&&TRANSPARENT=TRUE&LAYERS=SnowMakingPotential7&WIDTH=1170&HEIGHT=1600&BBOX=-70000,6400000,1100000,8000000",
+  "Legend": {}
+}

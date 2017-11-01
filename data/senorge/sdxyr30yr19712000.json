@@ -1,0 +1,19 @@
+{
+  "ID": "MapLayer_sdxyr30yr19712000",
+  "Layers": "sdxyr30yr19712000",
+  "Name": "Normalen 1971-2000",
+  "ServiceUrl": "http://gridwms.nve.no/WMS_server/wms_server.aspx?VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:32633&FORMAT=image/png&",
+  "ServiceType": "wms",
+  "Clickable": false,
+  "InfoContent": {},
+  "Metadata": 83,
+  "Active": false,
+  "LegendType": "Grid",
+  "groupId": "TGklimaSnowDepths",
+  "groupName": "Snødybde",
+  "imageUrl": "http://gridwms.nve.no/WMS_server/wms_server.aspx?VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:32633&FORMAT=image/png&&TRANSPARENT=TRUE&LAYERS=sdxyr30yr19712000&WIDTH=1170&HEIGHT=1600&BBOX=-70000,6400000,1100000,8000000",
+  "Legend": {
+    "MapLayerId": "MapLayer_sdxyr30yr19712000",
+    "LegendUrl": "http://xgeo.no/legend/grid/sdxyr30yr19712000.cll.no.png"
+  }
+}

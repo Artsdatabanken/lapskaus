@@ -1,0 +1,19 @@
+{
+  "ID": "MapLayer_rryr30yr_19611990",
+  "Layers": "rryr30yr_19611990",
+  "Name": "Normalen 1961-1990",
+  "ServiceUrl": "http://senorge-wms.met.no/senorge/climate.map?SERVICE=WMS&VERSION=1.1.1&FORMAT=image/png&SRS=EPSG:32633&REQUEST=GetMap&EXCEPTIONS=application/vnd.ogc.se_blank&",
+  "ServiceType": "wms",
+  "Clickable": false,
+  "InfoContent": {},
+  "Metadata": 29,
+  "Active": false,
+  "LegendType": "Grid",
+  "groupId": "TGklimaPrecipitation",
+  "groupName": "Nedbør",
+  "imageUrl": "http://senorge-wms.met.no/senorge/climate.map?SERVICE=WMS&VERSION=1.1.1&FORMAT=image/png&SRS=EPSG:32633&REQUEST=GetMap&EXCEPTIONS=application/vnd.ogc.se_blank&&TRANSPARENT=TRUE&LAYERS=rryr30yr_19611990&WIDTH=1170&HEIGHT=1600&BBOX=-70000,6400000,1100000,8000000",
+  "Legend": {
+    "MapLayerId": "MapLayer_rryr30yr_19611990",
+    "LegendUrl": "http://xgeo.no/legend/grid/rryr30yr_19611990.cll.no.png"
+  }
+}
