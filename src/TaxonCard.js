@@ -11,7 +11,7 @@ function TaxonCard (props) {
         <MuiThemeProvider>
         <Card>
             <CardMedia
-                overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle"/>}
+                overlay={<CardTitle title="Vitenskapelig navn" subtitle="Populærnavn"/>}
             >
                 <img src={url} alt=""/>
             </CardMedia>
