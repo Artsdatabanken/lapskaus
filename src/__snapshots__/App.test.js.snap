@@ -740,7 +740,7 @@ exports[`renders without crashing 4`] = `
   >
     <label
       className={undefined}
-      htmlFor="undefined-Skpvitenskapelignavn-Skptakson-60874"
+      htmlFor="1"
       onClick={undefined}
       style={
         Object {
@@ -777,7 +777,7 @@ exports[`renders without crashing 4`] = `
     <input
       autoComplete="off"
       disabled={false}
-      id="undefined-Skpvitenskapelignavn-Skptakson-60874"
+      id="1"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
