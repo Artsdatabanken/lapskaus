@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AutoComplete from 'material-ui/AutoComplete';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getNext from './componentid'
 
 const dataSourceConfig = {
     text: 'ScientificName',
@@ -31,6 +32,7 @@ export default class TaxonSearch extends Component {
         return (
             <MuiThemeProvider>
                 <AutoComplete
+                    id={getNext()}
                     hintText="Søk på vitenskapelig navn"
                     dataSource={this.state.dataSource}
                     dataSourceConfig={dataSourceConfig}
