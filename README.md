@@ -1,3 +1,21 @@
+[![Build Status](https://travis-ci.org/Artsdatabanken/lapskaus.svg?branch=master)](https://travis-ci.org/Artsdatabanken/lapskaus)
+[![Coverage Status](https://coveralls.io/repos/github/Artsdatabanken/lapskaus/badge.svg?branch=master)](https://coveralls.io/github/Artsdatabanken/lapskaus?branch=master)
+![Dependencies](https://david-dm.org/artsdatabanken/lapskaus.svg)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Artsdatabanken/lapskaus.svg)](https://greenkeeper.io/)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
+
+<!--[![Screenshot](screenshot.png "lapskaus screenshot")](http://lapskaus.surge.sh/)-->
+
+# Lapskaus
+
+Brief description
+
+* [Demo](http://outgoing-front.surge.sh/)
+* [Storybook](http://outgoing-front.surge.sh/storybook)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -5,7 +23,6 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Table of Contents
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Artsdatabanken/lapskaus.svg)](https://greenkeeper.io/)
 
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
@@ -285,7 +302,7 @@ In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and s
 
 Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
 
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
+The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine.
 
 ## Formatting Code Automatically
 
@@ -1771,7 +1788,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 

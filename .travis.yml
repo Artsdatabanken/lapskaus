@@ -5,16 +5,16 @@ cache:
   directories:
     - node_modules
 script:
-  - "yarn test"
-  - "yarn build"
-  - "yarn build-storybook"
+  - yarn test
+  - yarn build
+  - yarn build-storybook
 deploy:
   provider: surge
   project: ./build/
   domain: lapskaus.surge.sh
   skip_cleanup: true
 after_success:
-#  - npm run report-coverage
+  - npm run report-coverage
 notifications:
   slack:
     on_success: change
