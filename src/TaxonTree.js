@@ -20,7 +20,9 @@ function TaxonTree (props) {
                                 </Chip>
                             }
                             primaryText={item.ScientificName}
-                            secondaryText={item.PopularName}                            />
+                            secondaryText={item.PopularName}
+                            onClick={() => props.onClick(item.Id)}
+                        />
                     )
                     : <ListItem primaryText="Loading..." />
                 }
