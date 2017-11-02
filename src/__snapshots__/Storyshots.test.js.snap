@@ -1109,7 +1109,7 @@ exports[`Storyshots Taxon Locations default 1`] = `
               >
                 <img
                   alt=""
-                  src="dummyTaxonLocations.png"
+                  src="http://nodeyoda.westeurope.cloudapp.azure.com/observation/undefined.png"
                   style={
                     Object {
                       "maxWidth": "100%",
