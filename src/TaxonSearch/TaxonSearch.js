@@ -41,6 +41,8 @@ export default class TaxonSearch extends Component {
         dataSourceConfig={dataSourceConfig}
         onUpdateInput={this.handleUpdateInput}
         onNewRequest={this.handleSelection}
+        onKeyDown={this.props.onKeyDown}
+        onClose={this.props.onAbort}
         floatingLabelText="Søk på takson"
         fullWidth={true}
       />
