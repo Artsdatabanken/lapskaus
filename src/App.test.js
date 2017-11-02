@@ -1,9 +1,8 @@
 import React from 'react';
-import AppBarEG from './AppBarEG';
-import TaxonTree from './TaxonTree';
+import AppBarEG from './AppBar/AppBarEG';
+import App from './App'
 import renderer from 'react-test-renderer';
-import TaxonCard from "./TaxonCard";
-import TaxonSearch from "./TaxonSearch";
+import backend from './backend';
 
 var dummyItems = [
     {
@@ -16,10 +15,13 @@ var dummyItems = [
         "CumulativeObservationCount": 18588919
     }];
 
-it('renders without crashing', () => {
-    expect(renderer.create(<TaxonTree items={dummyItems} />).toJSON()).toMatchSnapshot();
-    expect(renderer.create(<AppBarEG />).toJSON()).toMatchSnapshot();
-    expect(renderer.create(<TaxonCard />).toJSON()).toMatchSnapshot();
-    expect(renderer.create(<TaxonSearch />).toJSON()).toMatchSnapshot();
-});
 
+    jest.mock('./backend', () => ({
+        loadTaxonTree: jest.fn()
+    }));
+
+it('renders without crashing', () => {
+    backend.loadTaxonTree.mockImplementation(success => new Promise((resolve, reject) => resolve(dummyItems)))
+    renderer.create(<App />)
+    expect(backend.loadTaxonTree.mock.calls).toHaveLength(1);
+})
