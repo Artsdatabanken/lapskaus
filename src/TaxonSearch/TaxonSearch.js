@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AutoComplete from 'material-ui/AutoComplete'
 import getNext from '../componentid'
+import backend from '../backend'
 
 const dataSourceConfig = {
   text: 'ScientificName',
@@ -9,33 +10,33 @@ const dataSourceConfig = {
 
 export default class TaxonSearch extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       dataSource: []
     }
   }
+
 
   handleSelection = (chosenRequest, index) => {
     this.props.onClick(chosenRequest.Id)
   }
 
   handleUpdateInput = searchStr => {
-    fetch(
-      `https://artskart.artsdatabanken.no/appapi/api/data/SearchTaxons?maxCount=15&name=${searchStr}`
-    )
-      .then(result => result.json())
+      backend.searchTaxons(searchStr)
       .then(items =>
         this.setState({
           dataSource: items
         })
       )
-  }
+  };
 
   render() {
     return (
       <AutoComplete
+          autoFocus
         id={getNext()}
         hintText="Søk på vitenskapelig navn"
+        filter={AutoComplete.caseInsensitiveFilter}
         dataSource={this.state.dataSource}
         dataSourceConfig={dataSourceConfig}
         onUpdateInput={this.handleUpdateInput}

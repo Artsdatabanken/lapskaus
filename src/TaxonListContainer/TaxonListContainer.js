@@ -2,6 +2,7 @@ import React from 'react'
 import AppBarEG from '../AppBar/AppBarEG'
 import TaxonTree from '../TaxonTree/TaxonTree'
 import TaxonCard from '../TaxonCard/TaxonCard'
+import TaxonLocations from "../TaxonLocations/TaxonLocations";
 import backend from '../backend'
 
 class TaxonListContainer extends React.Component {
@@ -41,6 +42,9 @@ class TaxonListContainer extends React.Component {
           items={this.state.items}
           onClick={taxonId => this.handleGoToTaxon(taxonId)}
         />
+          <TaxonLocations
+              taxonId={this.props.match.params.taxon}
+          />
       </div>
     )
   }

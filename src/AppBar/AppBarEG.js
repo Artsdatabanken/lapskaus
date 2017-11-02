@@ -9,24 +9,24 @@ const styles = {
   title: {
     cursor: 'pointer'
   }
-}
+};
 
 export default class AppBarEG extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       showSearch: false
     }
   }
 
   handleSearchButtonClick = () => {
-    this.setState({ showSearch: !this.state.showSearch })
-  }
+    this.setState({ showSearch: !this.state.showSearch });
+  };
 
   handleSearchClick = taxonId => {
     this.setState({ showSearch: !this.state.showSearch })
     this.props.onClick(taxonId)
-  }
+  };
 
   render() {
     return (
@@ -48,7 +48,8 @@ export default class AppBarEG extends Component {
           }
         />
         {this.state.showSearch && (
-          <TaxonSearch onClick={this.handleSearchClick} />
+          <TaxonSearch
+              onClick={this.handleSearchClick} />
         )}
       </div>
     )

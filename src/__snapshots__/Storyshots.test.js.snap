@@ -973,6 +973,201 @@ exports[`Storyshots Taxon Card default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Taxon Locations default 1`] = `
+<div
+  style={
+    Object {
+      "background": "#ffffff",
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    className="SplitPane  vertical "
+    style={
+      Object {
+        "MozUserSelect": "text",
+        "WebkitUserSelect": "text",
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": "100%",
+        "left": 0,
+        "msUserSelect": "text",
+        "outline": "none",
+        "overflow": "hidden",
+        "position": "absolute",
+        "right": 0,
+        "userSelect": "text",
+      }
+    }
+  >
+    <div
+      className="Pane vertical Pane1"
+      style={
+        Object {
+          "flex": 1,
+          "outline": "none",
+          "overflowX": "auto",
+          "overflowY": "auto",
+          "position": "relative",
+        }
+      }
+    >
+      <div>
+        <div
+          style={
+            Object {
+              "WebkitTapHighlightColor": "rgba(0,0,0,0)",
+              "backgroundColor": "#ffffff",
+              "borderRadius": 2,
+              "boxShadow": "0 1px 6px rgba(0, 0, 0, 0.12),
+                     0 1px 4px rgba(0, 0, 0, 0.12)",
+              "boxSizing": "border-box",
+              "color": "rgba(0, 0, 0, 0.87)",
+              "fontFamily": "Roboto, sans-serif",
+              "muiPrepared": true,
+              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+              "zIndex": 1,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "paddingBottom": 0,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "boxSizing": "border-box",
+                  "fontWeight": 500,
+                  "muiPrepared": true,
+                  "padding": 16,
+                  "position": "relative",
+                  "whiteSpace": "nowrap",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "muiPrepared": true,
+                    "paddingRight": "90px",
+                    "verticalAlign": "top",
+                    "whiteSpace": "normal",
+                  }
+                }
+              >
+                <span
+                  style={
+                    Object {
+                      "color": "rgba(0, 0, 0, 0.87)",
+                      "display": "block",
+                      "fontSize": 15,
+                      "muiPrepared": true,
+                    }
+                  }
+                >
+                  Utbredelse (mock)
+                </span>
+                <span
+                  style={
+                    Object {
+                      "color": "rgba(0, 0, 0, 0.54)",
+                      "display": "block",
+                      "fontSize": 14,
+                      "muiPrepared": true,
+                    }
+                  }
+                >
+                  basert på observasjoner
+                </span>
+              </div>
+            </div>
+            <div
+              style={
+                Object {
+                  "muiPrepared": true,
+                  "position": "relative",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "muiPrepared": true,
+                  }
+                }
+              >
+                <img
+                  alt=""
+                  src="dummyTaxonLocations.png"
+                  style={
+                    Object {
+                      "maxWidth": "100%",
+                      "minWidth": "100%",
+                      "muiPrepared": true,
+                      "verticalAlign": "top",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span
+      className="Resizer vertical "
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "cursor": "col-resize",
+          "marginRight": -6,
+          "width": 10,
+          "zIndex": 1,
+        }
+      }
+    />
+    <div
+      className="Pane vertical Pane2"
+      style={
+        Object {
+          "flex": "none",
+          "outline": "none",
+          "position": "relative",
+          "width": 0,
+        }
+      }
+    >
+      <div
+        className="sb-addon-material-ui-theme_sidebar"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Taxon Search default 1`] = `
 <div
   style={
@@ -1085,6 +1280,7 @@ exports[`Storyshots Taxon Search default 1`] = `
             </div>
             <input
               autoComplete="off"
+              autoFocus={true}
               disabled={false}
               id="1"
               onBlur={[Function]}

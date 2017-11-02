@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import TaxonList from './TaxonListContainer/TaxonListContainer'
 import {resetComponentIds} from './componentid'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import './App.css'
 
 class App extends Component {
   render() {

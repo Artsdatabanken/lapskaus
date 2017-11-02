@@ -17,7 +17,10 @@ var dummyItems = [
 
 
     jest.mock('./backend', () => ({
-        loadTaxonTree: jest.fn()
+        loadTaxonTree: jest.fn(),
+        searchTaxons: jest.fn(),
+        getTaxonLocationsUrl: jest.fn(),
+        getTaxonPhotoUrl: jest.fn()
     }));
 
 it('renders without crashing', () => {

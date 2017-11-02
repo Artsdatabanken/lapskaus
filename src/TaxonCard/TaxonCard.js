@@ -1,9 +1,10 @@
 import React from 'react'
 import { Card, CardActions, CardMedia, CardTitle } from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
+import backend from '../backend'
 
 const TaxonCard = ({ taxonId }) => {
-  const url = `http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/${taxonId}.jpg`
+  const url = backend.getTaxonPhotoUrl(taxonId);
 
   return (
     <Card>
