@@ -6,13 +6,7 @@ const envMapScale = 1/2468.;
 
 class EnvironmentMap extends Component {
   componentDidMount() {
-  }
-
-  componentWillUnmount() {
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log('nextProps', nextProps)
+    const nextProps = this.props
     animationLoop.taxonId = nextProps.taxonId
     animationLoop.filterMin = nextProps.filterMin * envMapScale
     animationLoop.filterMax = nextProps.filterMax * envMapScale
@@ -20,11 +14,12 @@ class EnvironmentMap extends Component {
     animationLoop.start({ canvas: 'map-canvas' })
   }
 
+  componentWillUnmount() {
+    animationLoop.stop()
+  }
+
   render() {
-    console.log('render', this.props)
-    return <canvas
-        key={this.props.filterMin+'_'+this.props.filterMax+"_"+this.props.taxonId}
-        id="map-canvas" style={{width: '100%', height: '100%'}}/>
+    return <canvas id="map-canvas" style={{width: '100%', height: '100%'}}/>
   }
 }
 

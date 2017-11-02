@@ -25,13 +25,17 @@ float sampleObservation(float x, float y) {
 }
 
 float sampleObservations(float x, float y) {
+  float m1 =   0.856996891435279;
+  float m2 =  0.539407507237627;
+  float m3 = 0.249352208777296;
+
   float count =
-    0.500 * sampleObservation(x, y)
-  + 0.125 * sampleObservation(x + pixel.x, y)
-  + 0.125 * sampleObservation(x - pixel.x, y)
-  + 0.125 * sampleObservation(x, y+pixel.y)
-  + 0.125 * sampleObservation(x, y-pixel.y);
-  return log(0.005 * count + 1.);
+    sampleObservation(x, y)
+    + m1 * (sampleObservation(x - pixel.x, y)
+    + sampleObservation(x + pixel.x, y)
+    + sampleObservation(x, y + pixel.y)
+    + sampleObservation(x, y - pixel.y));
+    return log(0.0008 * count + 1.);
 }
 
 void main(void) {
