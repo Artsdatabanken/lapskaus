@@ -18,6 +18,7 @@ class Backend {
     static getTaxonLocationsUrl(taxonId) {
         return `http://nodeyoda.westeurope.cloudapp.azure.com/observation/${taxonId}.png`;
     }
+
     static getTaxonPhotoUrl(taxonId) {
         return `http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/${taxonId}.jpg`;
     }

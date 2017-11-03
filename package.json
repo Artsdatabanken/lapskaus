@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "enzyme": "^3.1.0",
+    "luma.gl": "^4.0.5",
     "material-ui": "^0.19.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
