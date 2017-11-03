@@ -35,10 +35,12 @@ const animationLoop = new AnimationLoop({
     }))
   },
   onRender({ gl, tick, square }) {
+    console.log('nextprops',this.filterMin, this.filterMax)
     square.render({
       tick: tick,
       filterMin: this.filterMin,
-      filterMax: this.filterMax
+      filterMax: this.filterMax,
+      alpha: this.alpha
     })
   }
 })

@@ -2,18 +2,19 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import animationLoop from './animationLoop'
 
-const envMapScale = 1/2468.;
-
 class EnvironmentMap extends Component {
   componentDidMount() {
     const nextProps = this.props
-    animationLoop.taxonId = nextProps.taxonId
-    animationLoop.filterMin = nextProps.filterMin * envMapScale
-    animationLoop.filterMax = nextProps.filterMax * envMapScale
     animationLoop.stop()
     animationLoop.start({ canvas: 'map-canvas' })
   }
 
+  componentWillReceiveProps(nextProps) {
+    animationLoop.taxonId = nextProps.taxonId
+    animationLoop.filterMin = nextProps.filterMin
+    animationLoop.filterMax = nextProps.filterMax
+    animationLoop.alpha = nextProps.alpha
+  }
   componentWillUnmount() {
     animationLoop.stop()
   }
@@ -24,6 +25,7 @@ class EnvironmentMap extends Component {
 }
 
 EnvironmentMap.propTypes = {
+  alpha: PropTypes.number,
   taxonId: PropTypes.number,
   filterMin: PropTypes.number,
   filterMax: PropTypes.number
