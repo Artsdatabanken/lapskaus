@@ -4,17 +4,22 @@ import animationLoop from './animationLoop'
 
 class EnvironmentMap extends Component {
   componentDidMount() {
-    const nextProps = this.props
+    this.setProps(this.props)
     animationLoop.stop()
     animationLoop.start({ canvas: 'map-canvas' })
   }
 
   componentWillReceiveProps(nextProps) {
+    this.setProps(nextProps)
+  }
+
+  setProps(nextProps) {
     animationLoop.taxonId = nextProps.taxonId
     animationLoop.filterMin = nextProps.filterMin
     animationLoop.filterMax = nextProps.filterMax
     animationLoop.alpha = nextProps.alpha
   }
+
   componentWillUnmount() {
     animationLoop.stop()
   }

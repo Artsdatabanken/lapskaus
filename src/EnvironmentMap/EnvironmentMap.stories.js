@@ -18,9 +18,13 @@ storiesOf('Map', module)
   <Map
     taxonId={1281} filterMin={0} filterMax={200} />
 ))
-  .add('dekkfrøete >400m ASL', () => (
-    <Map
-    taxonId={1281} filterMin={400} filterMax={20000} />
+.add('dekkfrøete >400m ASL', () => (
+  <Map
+  taxonId={1281} filterMin={400} filterMax={20000} />
+))
+.add('fjellbjørk <600m ASL', () => (
+  <Map
+  taxonId={138955} filterMin={0} filterMax={600} />
 ))
 
 const Map = (props) => {
@@ -44,8 +48,8 @@ const Map = (props) => {
   return (
   <div
     style={{
-      width: textureWidth,// * 0.45,
-      height: textureHeight,// * 0.45
+      width: textureWidth,
+      height: textureHeight,
     }}
   >
     <h3>Taxon #{props.taxonId}: range {filterMin}-{filterMax}</h3>

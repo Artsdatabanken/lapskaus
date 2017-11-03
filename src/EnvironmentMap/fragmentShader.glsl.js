@@ -17,6 +17,9 @@ const vec2 pixel = 1.0 / texDimensions;
 float packColor(vec3 color) {
   return color.r + color.g * 256.0 + color.b * 256.0 * 256.0;
 }
+float packColor2(vec3 color) {
+  return color.r + color.g * 256.0 + color.b * 256.0 * 256.0;
+}
 
 float sampleObservation(float x, float y) {
   vec3 rgb = texture2D(uSamplerObservations, vec2(x,y)).rgb;
@@ -32,7 +35,8 @@ float sampleObservations(float x, float y) {
     + sampleObservation(x, y + pixel.y)
     + sampleObservation(x, y - pixel.y));
     return log(0.0008 * count + 1.);
-}
+    return log(0.1008 * count + 1.);
+  }
 
 void main(void) {
   vec2 texCoord = position * 0.5 + 0.5;
@@ -47,7 +51,7 @@ void main(void) {
   vec4 observationColor = texture2D(uSamplerColorRamp,
     vec2(clamp(1.75*observationFrequency-0.8,0.001,0.999), 0.5));
 //    gl_FragColor.rgb = mix(gl_FragColor.rgb, observationColor.rgb, alpha1);
-    gl_FragColor.rgb *= 1.+-1.*alpha1*(1.+-1.*observationColor.rgb);
-  }
+gl_FragColor.rgb *= 1.+-1.*alpha1*(1.+-1.*observationColor.rgb);
+}
 `
 export default FRAGMENT_SHADER
