@@ -43,10 +43,11 @@ void main(void) {
      * smoothstep(filterMin-0.01, filterMin, envValue);
   float observationFrequency = clamp(tick*0.02, 0., 1.0)*
     clamp(0.2*sampleObservations(texCoord.x, texCoord.y), 0., 0.999);
-  float alpha1 =  clamp(0.8 * sqrt(observationFrequency), 0.0, 0.80) * alphaEnv * alpha;
+  float alpha1 =  clamp(0.75 * sqrt(observationFrequency), 0.0, 0.80) * alphaEnv * alpha;
   vec4 observationColor = texture2D(uSamplerColorRamp,
     vec2(clamp(1.75*observationFrequency-0.8,0.001,0.999), 0.5));
-  gl_FragColor.rgb = mix(gl_FragColor.rgb, observationColor.rgb, alpha1);
-}
+//    gl_FragColor.rgb = mix(gl_FragColor.rgb, observationColor.rgb, alpha1);
+    gl_FragColor.rgb *= 1.+-1.*alpha1*(1.+-1.*observationColor.rgb);
+  }
 `
 export default FRAGMENT_SHADER

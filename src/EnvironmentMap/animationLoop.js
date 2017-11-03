@@ -17,7 +17,7 @@ const animationLoop = new AnimationLoop({
 
     return loadTextures(gl, {
       urls: [
-        'http://nodeyoda.westeurope.cloudapp.azure.com/map/gebco_skyggerelieff2.png',
+        'http://nodeyoda.westeurope.cloudapp.azure.com/map/gebco_skyggerelieff2_grey.png',
         'http://nodeyoda.westeurope.cloudapp.azure.com/map/mosaic_dm_cut_1km.png',
         `http://nodeyoda.westeurope.cloudapp.azure.com/observation/${this.taxonId}.png`,
         ramp

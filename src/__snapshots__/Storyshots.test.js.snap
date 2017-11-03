@@ -610,7 +610,6 @@ exports[`Storyshots App Bar root 1`] = `
 
 exports[`Storyshots Map alt 1`] = `
 <div
-  keyx={0}
   style={
     Object {
       "height": 1552,
@@ -640,7 +639,6 @@ exports[`Storyshots Map alt 1`] = `
 
 exports[`Storyshots Map dekkfrøete <200m ASL 1`] = `
 <div
-  keyx={0}
   style={
     Object {
       "height": 1552,
@@ -670,7 +668,6 @@ exports[`Storyshots Map dekkfrøete <200m ASL 1`] = `
 
 exports[`Storyshots Map dekkfrøete >400m ASL 1`] = `
 <div
-  keyx={400}
   style={
     Object {
       "height": 1552,
