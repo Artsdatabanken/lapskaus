@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "enzyme": "^3.1.0",
+    "luma.gl": "^4.0.5",
     "material-ui": "^0.19.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -18,7 +19,7 @@
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public -o build/storybook"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.13",
