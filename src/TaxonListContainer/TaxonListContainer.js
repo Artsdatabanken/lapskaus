@@ -5,7 +5,7 @@ import TaxonTree from '../TaxonTree/TaxonTree'
 import TaxonCard from '../TaxonCard/TaxonCard'
 import TaxonLocations from "../TaxonLocations/TaxonLocations";
 import backend from '../backend'
-import EnvironmentMap from "../EnvironmentMap/EnvironmentMap";
+// import EnvironmentMap from "../EnvironmentMap/EnvironmentMap";
 
 class TaxonListContainer extends React.Component {
   state = {
@@ -51,11 +51,11 @@ class TaxonListContainer extends React.Component {
             />
           </Grid>
           <Grid item xs={12} sm={6} lg={4} xl={3}>
-              {/*<TaxonLocations*/}
-                  {/*taxonId={this.props.match.params.taxon}*/}
-              {/*/>*/}
-              <EnvironmentMap
-                  taxonId={this.props.match.params.taxon} filterMin={400} filterMax={20000} />
+              <TaxonLocations
+                  taxonId={this.props.match.params.taxon}
+              />
+              {/*<EnvironmentMap*/}
+                  {/*taxonId={this.props.match.params.taxon} filterMin={400} filterMax={20000} />*/}
           </Grid>
       </Grid>
     )

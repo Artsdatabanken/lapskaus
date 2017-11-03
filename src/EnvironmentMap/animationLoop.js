@@ -1,5 +1,4 @@
 import {
-  GL,
   AnimationLoop,
   loadTextures,
   ClipSpaceQuad,
