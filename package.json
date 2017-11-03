@@ -19,7 +19,7 @@
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public -o build/storybook"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.13",
