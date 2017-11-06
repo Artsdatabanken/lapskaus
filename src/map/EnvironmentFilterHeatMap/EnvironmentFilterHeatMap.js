@@ -2,11 +2,17 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import animationLoop from './animationLoop'
 
-class EnvironmentMap extends Component {
+class EnvironmentFilterHeatMap extends Component {
   componentDidMount() {
     this.setProps(this.props)
     animationLoop.stop()
     animationLoop.start({ canvas: 'map-canvas' })
+    window.setTimeout(()=>this.stopAnimation(), 5000);
+  }
+
+  stopAnimation() {
+    animationLoop.stop();
+    animationLoop._stopped=true
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,11 +35,11 @@ class EnvironmentMap extends Component {
   }
 }
 
-EnvironmentMap.propTypes = {
+EnvironmentFilterHeatMap.propTypes = {
   alpha: PropTypes.number,
   taxonId: PropTypes.number,
   filterMin: PropTypes.number,
   filterMax: PropTypes.number
 }
 
-export default EnvironmentMap
+export default EnvironmentFilterHeatMap
