@@ -1,8 +1,8 @@
 import React from 'react';
-import {List, ListItem} from 'material-ui/List';
-import Avatar from 'material-ui/Avatar';
-import FileFolder from 'material-ui/svg-icons/file/folder';
-import Chip from 'material-ui/Chip';
+import List, { ListItem, ListItemText, ListItemSecondaryAction } from 'material-ui-next/List';
+import Avatar from 'material-ui-next/Avatar';
+import FolderIcon from 'material-ui-icons/Folder'
+import Chip from 'material-ui-next/Chip';
 
 function TaxonTree (props) {
     return(
@@ -10,19 +10,29 @@ function TaxonTree (props) {
                 {props.items.length ?
                     props.items.map(item=>
                         <ListItem
+                            button
                             key={item.Id}
-                            leftAvatar={<Avatar icon={<FileFolder />} />}
-                            rightIconButton={
-                                <Chip>
-                                    {item.CumulativeObservationCount}
-                                </Chip>
-                            }
-                            primaryText={item.ScientificName}
-                            secondaryText={item.PopularName}
                             onClick={() => props.onClick(item.Id)}
-                        />
+                        >
+                            <Avatar>
+                                <FolderIcon/>
+                            </Avatar>
+                            <ListItemText
+                                primary={item.ScientificName}
+                                secondary={item.PopularName}
+                            />
+                            <ListItemSecondaryAction>
+                                <Chip
+                                    label={item.CumulativeObservationCount}
+                                />
+                            </ListItemSecondaryAction>
+                        </ListItem>
                     )
-                    : <ListItem primaryText="Loading..." />
+                    : <ListItem>
+                        <ListItemText
+                            primary={"Loading..."}
+                        />
+                    </ListItem>
                 }
             </List>
     )

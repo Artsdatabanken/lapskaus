@@ -6,7 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
   render() {
-    resetComponentIds()
+      resetComponentIds();
     return (
       <MuiThemeProvider>
         <BrowserRouter>

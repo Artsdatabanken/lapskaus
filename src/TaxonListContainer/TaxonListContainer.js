@@ -54,9 +54,12 @@ class TaxonListContainer extends React.Component {
               <TaxonLocations
                   taxonId={this.props.match.params.taxon}
               />
-              {/*<EnvironmentMap*/}
-                  {/*taxonId={this.props.match.params.taxon} filterMin={400} filterMax={20000} />*/}
           </Grid>
+          {/*<Grid item xs={12} sm={6} lg={4} xl={3}>*/}
+              {/*<EnvironmentMap*/}
+                  {/*taxonId={this.props.match.params.taxon} filterMin={400} filterMax={20000} alpha={0.5} />*/}
+
+          {/*</Grid>*/}
       </Grid>
     )
   }
