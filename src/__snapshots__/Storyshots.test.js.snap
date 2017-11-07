@@ -423,15 +423,19 @@ exports[`Storyshots Map environment filtered alt 1`] = `
     -
     20000
   </h3>
-  <canvas
-    id="map-canvas"
-    style={
-      Object {
-        "height": "100%",
-        "width": "100%",
+  <div
+    id={0}
+  >
+    <canvas
+      id="map-canvas-heatmap"
+      style={
+        Object {
+          "height": undefined,
+          "width": undefined,
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
 
@@ -452,15 +456,19 @@ exports[`Storyshots Map environment filtered dekkfrøete <200m ASL 1`] = `
     -
     200
   </h3>
-  <canvas
-    id="map-canvas"
-    style={
-      Object {
-        "height": "100%",
-        "width": "100%",
+  <div
+    id={1281}
+  >
+    <canvas
+      id="map-canvas-heatmap"
+      style={
+        Object {
+          "height": undefined,
+          "width": undefined,
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
 
@@ -481,15 +489,19 @@ exports[`Storyshots Map environment filtered dekkfrøete >400m ASL 1`] = `
     -
     20000
   </h3>
-  <canvas
-    id="map-canvas"
-    style={
-      Object {
-        "height": "100%",
-        "width": "100%",
+  <div
+    id={1281}
+  >
+    <canvas
+      id="map-canvas-heatmap"
+      style={
+        Object {
+          "height": undefined,
+          "width": undefined,
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
 
@@ -510,15 +522,19 @@ exports[`Storyshots Map environment filtered fjellbjørk <600m ASL 1`] = `
     -
     600
   </h3>
-  <canvas
-    id="map-canvas"
-    style={
-      Object {
-        "height": "100%",
-        "width": "100%",
+  <div
+    id={138955}
+  >
+    <canvas
+      id="map-canvas-heatmap"
+      style={
+        Object {
+          "height": undefined,
+          "width": undefined,
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
 
@@ -529,10 +545,10 @@ exports[`Storyshots Map observations scatterplot  alt 1`] = `
     0
   </h3>
   <div
-    id="0"
+    id={0}
   >
     <canvas
-      id="map-canvas"
+      id="map-canvas-scatter"
       style={
         Object {
           "height": 1552,
@@ -551,10 +567,10 @@ exports[`Storyshots Map observations scatterplot  dekkfrøete 1`] = `
     1281
   </h3>
   <div
-    id="1281"
+    id={1281}
   >
     <canvas
-      id="map-canvas"
+      id="map-canvas-scatter"
       style={
         Object {
           "height": 1552,
@@ -573,10 +589,10 @@ exports[`Storyshots Map observations scatterplot  fjellbjørk 1`] = `
     138955
   </h3>
   <div
-    id="138955"
+    id={138955}
   >
     <canvas
-      id="map-canvas"
+      id="map-canvas-scatter"
       style={
         Object {
           "height": 1552,
@@ -1066,37 +1082,149 @@ exports[`Storyshots Taxon Locations default 1`] = `
     >
       <div>
         <div
-          className="MuiPaper-root-11 MuiPaper-shadow2-15 MuiPaper-rounded-12 TaxonLocations-card-96"
+          className="MuiPaper-root-11 MuiPaper-shadow2-15 MuiPaper-rounded-12 TaxonLocations-card-97"
         >
           <div
-            className="MuiCardContent-root-98"
+            className="MuiCardContent-root-99"
           >
             <h2
               className="MuiTypography-root-58 MuiTypography-headline-63"
             >
-              Utbredelse (mock)
+              Utbredelse
             </h2>
             <p
               className="MuiTypography-root-58 MuiTypography-body1-67"
             >
-              basert på observasjoner..
+              basert på observasjoner
             </p>
+            <div
+              className="MuiTabs-root-100"
+            >
+              <div
+                className="MuiTabs-flexContainer-101"
+              >
+                <div
+                  className="MuiTabs-scrollingContainer-102 MuiTabs-fixed-103"
+                  onScroll={[Function]}
+                  role="tablist"
+                  style={
+                    Object {
+                      "marginBottom": 0,
+                    }
+                  }
+                >
+                  <div
+                    className="MuiTabs-flexContainer-101"
+                  >
+                    <button
+                      aria-selected={true}
+                      className="MuiButtonBase-root-49 MuiTab-root-107 MuiTab-rootInherit-115 MuiTab-rootInheritSelected-116"
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      role="tab"
+                      style={undefined}
+                      tabIndex={0}
+                      type="button"
+                    >
+                      <span
+                        className="MuiTab-wrapper-119"
+                      >
+                        <div
+                          className="MuiTab-labelContainer-120"
+                        >
+                          <span
+                            className="MuiTab-label-121"
+                          >
+                            Heat map
+                          </span>
+                        </div>
+                      </span>
+                      <span
+                        className="MuiTouchRipple-root-51"
+                      />
+                    </button>
+                    <button
+                      aria-selected={false}
+                      className="MuiButtonBase-root-49 MuiTab-root-107 MuiTab-rootInherit-115"
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      role="tab"
+                      style={undefined}
+                      tabIndex={0}
+                      type="button"
+                    >
+                      <span
+                        className="MuiTab-wrapper-119"
+                      >
+                        <div
+                          className="MuiTab-labelContainer-120"
+                        >
+                          <span
+                            className="MuiTab-label-121"
+                          >
+                            Scatter plot
+                          </span>
+                        </div>
+                      </span>
+                      <span
+                        className="MuiTouchRipple-root-51"
+                      />
+                    </button>
+                  </div>
+                  <div
+                    className="MuiTabIndicator-root-123 MuiTabIndicator-colorAccent-124"
+                    style={
+                      Object {
+                        "left": 0,
+                        "width": 0,
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div
-            className="MuiCardMedia-root-99 TaxonLocations-media-97"
+            className="MuiCardMedia-root-126 TaxonLocations-media-98"
             src={undefined}
             style={undefined}
             title="utbredelse"
           >
-            <canvas
-              id="map-canvas"
-              style={
-                Object {
-                  "height": "100%",
-                  "width": "100%",
-                }
-              }
-            />
+            <div>
+              <div
+                id={NaN}
+              >
+                <canvas
+                  id="map-canvas-heatmap"
+                  style={
+                    Object {
+                      "height": "750px",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1426,13 +1554,13 @@ exports[`Storyshots Taxon Tree default 1`] = `
     >
       <div>
         <ul
-          className="MuiList-root-101 MuiList-padding-102"
+          className="MuiList-root-128 MuiList-padding-129"
         >
           <div
-            className="MuiListItem-container-106"
+            className="MuiListItem-container-133"
           >
             <li
-              className="MuiButtonBase-root-49 MuiListItem-root-105 MuiListItem-gutters-112 MuiListItem-button-113 MuiListItem-secondaryAction-114 MuiListItem-default-108"
+              className="MuiButtonBase-root-49 MuiListItem-root-132 MuiListItem-gutters-139 MuiListItem-button-140 MuiListItem-secondaryAction-141 MuiListItem-default-135"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1449,7 +1577,7 @@ exports[`Storyshots Taxon Tree default 1`] = `
               tabIndex={0}
             >
               <div
-                className="MuiAvatar-root-115 MuiAvatar-colorDefault-116"
+                className="MuiAvatar-root-142 MuiAvatar-colorDefault-143"
               >
                 <svg
                   onMouseEnter={[Function]}
@@ -1474,15 +1602,15 @@ exports[`Storyshots Taxon Tree default 1`] = `
                 </svg>
               </div>
               <div
-                className="MuiListItemText-root-118"
+                className="MuiListItemText-root-145"
               >
                 <h3
-                  className="MuiTypography-root-58 MuiTypography-subheading-65 MuiListItemText-text-121"
+                  className="MuiTypography-root-58 MuiTypography-subheading-65 MuiListItemText-text-148"
                 >
                   Animalia
                 </h3>
                 <p
-                  className="MuiTypography-root-58 MuiTypography-body1-67 MuiTypography-colorSecondary-79 MuiListItemText-text-121"
+                  className="MuiTypography-root-58 MuiTypography-body1-67 MuiTypography-colorSecondary-79 MuiListItemText-text-148"
                 >
                   dyreriket
                 </p>
@@ -1492,17 +1620,17 @@ exports[`Storyshots Taxon Tree default 1`] = `
               />
             </li>
             <div
-              className="MuiListItemSecondaryAction-root-123"
+              className="MuiListItemSecondaryAction-root-150"
             >
               <div
-                className="MuiChip-root-124"
+                className="MuiChip-root-151"
                 onClick={undefined}
                 onKeyDown={[Function]}
                 role="button"
                 tabIndex={-1}
               >
                 <span
-                  className="MuiChip-label-129"
+                  className="MuiChip-label-156"
                 >
                   18588919
                 </span>

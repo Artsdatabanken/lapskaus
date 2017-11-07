@@ -9,15 +9,15 @@ storiesOf('Map observations scatterplot ', module)
 .addDecorator(withKnobs)
 .add('alt', () => {
     return (
-  <Map taxonId='0' />
+  <Map taxonId={0} />
 )})
 .add('dekkfrøete', () => (
   <Map
-    taxonId='1281' />
+    taxonId={1281} />
 ))
 .add('fjellbjørk', () => (
   <Map
-  taxonId='138955' />
+  taxonId={138955} />
 ))
 
 const Map = (props) => {

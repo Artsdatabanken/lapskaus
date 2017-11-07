@@ -6,7 +6,7 @@ class EnvironmentFilterHeatMap extends Component {
   componentDidMount() {
     this.setProps(this.props)
     animationLoop.stop()
-    animationLoop.start({ canvas: 'map-canvas' })
+    animationLoop.start({ canvas: 'map-canvas-heatmap' })
     window.setTimeout(()=>this.stopAnimation(), 5000);
   }
 
@@ -26,7 +26,7 @@ class EnvironmentFilterHeatMap extends Component {
     animationLoop.alpha = nextProps.alpha
 
     // Reanimate
-    animationLoop.start({ canvas: 'map-canvas' });
+    animationLoop.start({ canvas: 'map-canvas-heatmap' });
     window.setTimeout(()=>this.stopAnimation(), 5000);
 
   }
@@ -36,7 +36,10 @@ class EnvironmentFilterHeatMap extends Component {
   }
 
   render() {
-    return <canvas id="map-canvas" style={{width: '100%', height: '100%'}}/>
+      const {width, height} = this.props;
+      return  <div id={this.props.taxonId}>
+        <canvas id="map-canvas-heatmap" style={{width: width, height: height}}/>
+      </div>
   }
 }
 

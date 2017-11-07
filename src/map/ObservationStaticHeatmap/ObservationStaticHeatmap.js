@@ -39,7 +39,7 @@ class ObservationStaticHeatmap extends Component {
 
 ObservationStaticHeatmap.propTypes = {
   alpha: PropTypes.number,
-  taxonId: PropTypes.string
+  taxonId: PropTypes.number
 }
 
 export default ObservationStaticHeatmap

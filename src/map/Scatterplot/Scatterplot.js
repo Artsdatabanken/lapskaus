@@ -15,7 +15,7 @@ class Scatterplot extends Component {
   componentWillReceiveProps(nextProps) {
     animationLoop.stop()
     this.setProps(nextProps)
-    animationLoop.start({ canvas: 'map-canvas' })
+    animationLoop.start({ canvas: 'map-canvas-scatter' })
   }
 
   setProps(nextProps) {
@@ -23,6 +23,11 @@ class Scatterplot extends Component {
     animationLoop.filterMin = nextProps.filterMin
     animationLoop.filterMax = nextProps.filterMax
     animationLoop.alpha = nextProps.alpha
+
+    // Reanimate
+    animationLoop.start({ canvas: 'map-canvas-scatter' });
+    window.setTimeout(()=>this.stopAnimation(), 5000);
+
   }
 
   componentWillUnmount() {
@@ -30,16 +35,16 @@ class Scatterplot extends Component {
   }
 
   render() {
-    const {width, height} = this.props
+    const {width, height} = this.props;
     return <div id={this.props.taxonId}>
-        <canvas id="map-canvas" style={{width: width, height: height}}/>
+        <canvas id="map-canvas-scatter" style={{width: width, height: height}}/>
       </div>
   }
 }
 
 Scatterplot.propTypes = {
   alpha: PropTypes.number,
-  taxonId: PropTypes.string
+  taxonId: PropTypes.number
 }
 
 export default Scatterplot
