@@ -2,21 +2,11 @@ import {
   AnimationLoop,
   loadTextures,
   ClipSpaceQuad,
-  setParameters
 } from 'luma.gl'
 import fragmentShader from './fragmentShader.glsl'
 
-let pickPosition = [0, 0]
-function mousemove(e) {
-  pickPosition = [e.offsetX, e.offsetY]
-}
-function mouseleave(e) {
-  pickPosition = null
-}
 const animationLoop = new AnimationLoop({
   onInitialize({ gl }) {
-    gl.canvas.addEventListener('mousemove', mousemove)
-    gl.canvas.addEventListener('mouseleave', mouseleave)
     return loadTextures(gl, {
       urls: [
         'http://nodeyoda.westeurope.cloudapp.azure.com/map/gebco_skyggerelieff2_grey.png',

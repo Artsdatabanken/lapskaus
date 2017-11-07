@@ -1,6 +1,5 @@
 import React from 'react';
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui-next/Card';
-import Button from 'material-ui-next/Button';
+import Card, { CardContent, CardMedia } from 'material-ui-next/Card';
 import PropTypes from 'prop-types';
 import Typography from 'material-ui-next/Typography';
 import { withStyles } from 'material-ui-next/styles';
