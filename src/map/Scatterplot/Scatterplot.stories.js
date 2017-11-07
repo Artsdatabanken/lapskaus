@@ -3,21 +3,21 @@ import renderer from 'react-test-renderer'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 
-import ObservationStaticHeatmap from './ObservationStaticHeatmap'
+import Scatterplot from './Scatterplot'
 
-storiesOf('Map observations static ', module)
+storiesOf('Map observations scatterplot ', module)
 .addDecorator(withKnobs)
 .add('alt', () => {
     return (
-  <Map taxonId={0} />
+  <Map taxonId='0' />
 )})
 .add('dekkfrøete', () => (
   <Map
-    taxonId={1281} />
+    taxonId='1281' />
 ))
 .add('fjellbjørk', () => (
   <Map
-  taxonId={138955} />
+  taxonId='138955' />
 ))
 
 const Map = (props) => {
@@ -38,7 +38,7 @@ const Map = (props) => {
   return (
   <div>
     <h3>Taxon #{props.taxonId}</h3>
-    <ObservationStaticHeatmap taxonId={props.taxonId} width={1237} height={1552}/>
+    <Scatterplot taxonId={props.taxonId} width={1237} height={1552}/>
   </div>
   )
 }
