@@ -24,6 +24,11 @@ class EnvironmentFilterHeatMap extends Component {
     animationLoop.filterMin = nextProps.filterMin
     animationLoop.filterMax = nextProps.filterMax
     animationLoop.alpha = nextProps.alpha
+
+    // Reanimate
+    animationLoop.start({ canvas: 'map-canvas' });
+    window.setTimeout(()=>this.stopAnimation(), 5000);
+
   }
 
   componentWillUnmount() {

@@ -5,7 +5,6 @@ import TaxonTree from '../TaxonTree/TaxonTree'
 import TaxonCard from '../TaxonCard/TaxonCard'
 import TaxonLocations from "../TaxonLocations/TaxonLocations";
 import backend from '../backend'
-// import EnvironmentMap from "../EnvironmentMap/EnvironmentMap";
 
 class TaxonListContainer extends React.Component {
   state = {
@@ -41,26 +40,22 @@ class TaxonListContainer extends React.Component {
               onClick={taxonParentId => this.handleGoToTaxon(taxonParentId)}
             />
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} xl={3}>
+          <Grid item xs={12} sm={6} lg={4}>
             <TaxonCard taxonId={this.props.match.params.taxon} />
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} xl={3}>
+          <Grid item xs={12} sm={6} lg={4}>
             <TaxonTree
               items={this.state.items}
               onClick={taxonId => this.handleGoToTaxon(taxonId)}
             />
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} xl={3}>
+          <Grid item xs={12} sm={6} lg={4}>
               <TaxonLocations
                   taxonId={this.props.match.params.taxon}
               />
           </Grid>
-          {/*<Grid item xs={12} sm={6} lg={4} xl={3}>*/}
-              {/*<EnvironmentMap*/}
-                  {/*taxonId={this.props.match.params.taxon} filterMin={400} filterMax={20000} alpha={0.5} />*/}
-
-          {/*</Grid>*/}
       </Grid>
+
     )
   }
 }

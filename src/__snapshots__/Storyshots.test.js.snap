@@ -1066,109 +1066,37 @@ exports[`Storyshots Taxon Locations default 1`] = `
     >
       <div>
         <div
-          style={
-            Object {
-              "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-              "backgroundColor": "#ffffff",
-              "borderRadius": 2,
-              "boxShadow": "0 1px 6px rgba(0, 0, 0, 0.12),
-                     0 1px 4px rgba(0, 0, 0, 0.12)",
-              "boxSizing": "border-box",
-              "color": "rgba(0, 0, 0, 0.87)",
-              "fontFamily": "Roboto, sans-serif",
-              "muiPrepared": true,
-              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-              "zIndex": 1,
-            }
-          }
+          className="MuiPaper-root-11 MuiPaper-shadow2-15 MuiPaper-rounded-12 TaxonLocations-card-96"
         >
           <div
-            style={
-              Object {
-                "paddingBottom": 0,
-              }
-            }
+            className="MuiCardContent-root-98"
           >
-            <div
+            <h2
+              className="MuiTypography-root-58 MuiTypography-headline-63"
+            >
+              Utbredelse (mock)
+            </h2>
+            <p
+              className="MuiTypography-root-58 MuiTypography-body1-67"
+            >
+              basert på observasjoner..
+            </p>
+          </div>
+          <div
+            className="MuiCardMedia-root-99 TaxonLocations-media-97"
+            src={undefined}
+            style={undefined}
+            title="utbredelse"
+          >
+            <canvas
+              id="map-canvas"
               style={
                 Object {
-                  "boxSizing": "border-box",
-                  "fontWeight": 500,
-                  "muiPrepared": true,
-                  "padding": 16,
-                  "position": "relative",
-                  "whiteSpace": "nowrap",
+                  "height": "100%",
+                  "width": "100%",
                 }
               }
-            >
-              <div
-                style={
-                  Object {
-                    "display": "inline-block",
-                    "muiPrepared": true,
-                    "paddingRight": "90px",
-                    "verticalAlign": "top",
-                    "whiteSpace": "normal",
-                  }
-                }
-              >
-                <span
-                  style={
-                    Object {
-                      "color": "rgba(0, 0, 0, 0.87)",
-                      "display": "block",
-                      "fontSize": 15,
-                      "muiPrepared": true,
-                    }
-                  }
-                >
-                  Utbredelse (mock)
-                </span>
-                <span
-                  style={
-                    Object {
-                      "color": "rgba(0, 0, 0, 0.54)",
-                      "display": "block",
-                      "fontSize": 14,
-                      "muiPrepared": true,
-                    }
-                  }
-                >
-                  basert på observasjoner
-                </span>
-              </div>
-            </div>
-            <div
-              style={
-                Object {
-                  "muiPrepared": true,
-                  "position": "relative",
-                }
-              }
-            >
-              <div
-                style={
-                  Object {
-                    "muiPrepared": true,
-                  }
-                }
-              >
-                <img
-                  alt=""
-                  src="http://nodeyoda.westeurope.cloudapp.azure.com/observation/undefined.png"
-                  style={
-                    Object {
-                      "maxWidth": "100%",
-                      "minWidth": "100%",
-                      "muiPrepared": true,
-                      "verticalAlign": "top",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </div>
-              
-            </div>
+            />
           </div>
         </div>
       </div>
@@ -1498,13 +1426,13 @@ exports[`Storyshots Taxon Tree default 1`] = `
     >
       <div>
         <ul
-          className="MuiList-root-96 MuiList-padding-97"
+          className="MuiList-root-101 MuiList-padding-102"
         >
           <div
-            className="MuiListItem-container-101"
+            className="MuiListItem-container-106"
           >
             <li
-              className="MuiButtonBase-root-49 MuiListItem-root-100 MuiListItem-gutters-107 MuiListItem-button-108 MuiListItem-secondaryAction-109 MuiListItem-default-103"
+              className="MuiButtonBase-root-49 MuiListItem-root-105 MuiListItem-gutters-112 MuiListItem-button-113 MuiListItem-secondaryAction-114 MuiListItem-default-108"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1521,7 +1449,7 @@ exports[`Storyshots Taxon Tree default 1`] = `
               tabIndex={0}
             >
               <div
-                className="MuiAvatar-root-110 MuiAvatar-colorDefault-111"
+                className="MuiAvatar-root-115 MuiAvatar-colorDefault-116"
               >
                 <svg
                   onMouseEnter={[Function]}
@@ -1546,15 +1474,15 @@ exports[`Storyshots Taxon Tree default 1`] = `
                 </svg>
               </div>
               <div
-                className="MuiListItemText-root-113"
+                className="MuiListItemText-root-118"
               >
                 <h3
-                  className="MuiTypography-root-58 MuiTypography-subheading-65 MuiListItemText-text-116"
+                  className="MuiTypography-root-58 MuiTypography-subheading-65 MuiListItemText-text-121"
                 >
                   Animalia
                 </h3>
                 <p
-                  className="MuiTypography-root-58 MuiTypography-body1-67 MuiTypography-colorSecondary-79 MuiListItemText-text-116"
+                  className="MuiTypography-root-58 MuiTypography-body1-67 MuiTypography-colorSecondary-79 MuiListItemText-text-121"
                 >
                   dyreriket
                 </p>
@@ -1564,17 +1492,17 @@ exports[`Storyshots Taxon Tree default 1`] = `
               />
             </li>
             <div
-              className="MuiListItemSecondaryAction-root-118"
+              className="MuiListItemSecondaryAction-root-123"
             >
               <div
-                className="MuiChip-root-119"
+                className="MuiChip-root-124"
                 onClick={undefined}
                 onKeyDown={[Function]}
                 role="button"
                 tabIndex={-1}
               >
                 <span
-                  className="MuiChip-label-124"
+                  className="MuiChip-label-129"
                 >
                   18588919
                 </span>
