@@ -1,5 +1,4 @@
 import {
-  GL,
   AnimationLoop,
   loadTextures,
   ClipSpaceQuad,
@@ -33,6 +32,7 @@ const animationLoop = new AnimationLoop({
   },
   onRender({ gl, tick, square }) {
     square.render({})
+    this.stop()
   }
 })
 

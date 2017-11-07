@@ -12,8 +12,8 @@ uniform sampler2D uSamplerColorRamp;
 float sampleObservations(vec2 xy) {
   vec4 c = texture2D(uSamplerObservations, xy);
   // 24-bit observation count (RGB)
-  float count = c.r + c.g * 256.0 + c.b * 256.0 * 256.0;
-  return clamp(0.0001*count, 0.0, 1.);
+  float count = c.r * 256.0 * 256.0 + c.g*256. + c.b;
+  return clamp(0.5*count, 0.0, 1.);
 }
 
 void main(void) {

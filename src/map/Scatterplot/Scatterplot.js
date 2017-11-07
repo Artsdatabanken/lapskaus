@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import animationLoop from './animationLoop'
 
-class ObservationStaticHeatmap extends Component {
+class Scatterplot extends Component {
   componentDidMount() {
     this.setProps(this.props)
 //    window.setTimeout(()=>this.stopAnimation(), 5000);
@@ -37,9 +37,9 @@ class ObservationStaticHeatmap extends Component {
   }
 }
 
-ObservationStaticHeatmap.propTypes = {
+Scatterplot.propTypes = {
   alpha: PropTypes.number,
   taxonId: PropTypes.string
 }
 
-export default ObservationStaticHeatmap
+export default Scatterplot
