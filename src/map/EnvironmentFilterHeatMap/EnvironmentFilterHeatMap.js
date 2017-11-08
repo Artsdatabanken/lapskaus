@@ -12,7 +12,6 @@ class EnvironmentFilterHeatMap extends Component {
 
   stopAnimation() {
     animationLoop.stop();
-    animationLoop._stopped=true
   }
 
   componentWillReceiveProps(nextProps) {

@@ -24,6 +24,7 @@ void main(void) {
   vec2 rampUv = vec2(clamp(observationFrequency,0.001,0.999), 0.5);
   vec3 observationColor = texture2D(uSamplerColorRamp, rampUv).rgb;
 
+  // multiply?
   gl_FragColor = vec4(basemapColor * (1.0 - alpha * (1.0-observationColor)),1.);
 }
 `
