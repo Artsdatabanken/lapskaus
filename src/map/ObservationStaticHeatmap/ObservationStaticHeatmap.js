@@ -23,6 +23,7 @@ class ObservationStaticHeatmap extends Component {
     animationLoop.filterMin = nextProps.filterMin
     animationLoop.filterMax = nextProps.filterMax
     animationLoop.alpha = nextProps.alpha
+    animationLoop.amplifyFactor = nextProps.amplifyFactor || 1.
   }
 
   componentWillUnmount() {

@@ -31,7 +31,7 @@ const animationLoop = new AnimationLoop({
       blurV: new ClipSpaceQuad(gl, {
         fs: blurV,
         uniforms: {
-          iChannel0: textures[1]
+          iChannel0: textures[1],
         }
       }),
       blurH: new ClipSpaceQuad(gl, {
@@ -67,7 +67,8 @@ const animationLoop = new AnimationLoop({
 
     blurV
       .setUniforms({
-        iResolution: [texWidth, texHeight]
+        iResolution: [texWidth, texHeight],
+        amplifyFactor: this.amplifyFactor
       })
       .draw({
         framebuffer: fbShadow

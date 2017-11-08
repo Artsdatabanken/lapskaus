@@ -7,6 +7,7 @@ varying vec2 position;
 
 uniform sampler2D iChannel0;
 uniform vec2 iResolution;
+uniform float amplifyFactor;
 
 float SCurve (float x) {
 	x = x * 2.0 - 1.0;
@@ -43,7 +44,7 @@ void main()
 {
     vec2 uv = position * 0.5 + 0.5;
     // Apply vertical blur to buffer A
-	gl_FragColor = BlurV(iChannel0, iResolution.xy, uv, 8.0);
+	gl_FragColor = BlurV(iChannel0, iResolution.xy, uv, 8.0) * amplifyFactor;
 }
 `
 export default FRAGMENT_SHADER
