@@ -4,7 +4,7 @@ import {
   ClipSpaceQuad,
   setParameters
 } from 'luma.gl'
-import ramp from './ramp_plasma.png'
+import ramp from '../colorramp/ramp_plasma.png'
 import fragmentShader from './fragmentShader.glsl'
 
 const animationLoop = new AnimationLoop({

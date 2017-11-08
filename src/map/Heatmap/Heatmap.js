@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import animationLoop from './animationLoop'
 
-class UglyRampNoProcessing extends Component {
+class Heatmap extends Component {
   componentDidMount() {
     this.setProps(this.props)
 //    window.setTimeout(()=>this.stopAnimation(), 5000);
@@ -23,6 +23,7 @@ class UglyRampNoProcessing extends Component {
     animationLoop.filterMin = nextProps.filterMin
     animationLoop.filterMax = nextProps.filterMax
     animationLoop.alpha = nextProps.alpha
+    animationLoop.amplifyFactor = nextProps.amplifyFactor || 1.
   }
 
   componentWillUnmount() {
@@ -37,9 +38,12 @@ class UglyRampNoProcessing extends Component {
   }
 }
 
-UglyRampNoProcessing.propTypes = {
+Heatmap.propTypes = {
   alpha: PropTypes.number,
-  taxonId: PropTypes.string
+  amplifyFactor: PropTypes.number,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  taxonId: PropTypes.string.isRequired
 }
 
-export default UglyRampNoProcessing
+export default Heatmap

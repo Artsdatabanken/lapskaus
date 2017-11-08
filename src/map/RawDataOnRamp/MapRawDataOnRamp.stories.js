@@ -3,9 +3,9 @@ import renderer from 'react-test-renderer'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
 
-import UglyRampNoProcessing from './UglyRampNoProcessing'
+import MapRawDataOnRamp from './MapRawDataOnRamp'
 
-storiesOf('Map ugly ramp static', module)
+storiesOf('Map raw data on ramp', module)
   .addDecorator(withKnobs)
   .add('alt', () => {
     return <Map taxonId={0} />
@@ -24,7 +24,7 @@ const Map = props => {
   return (
     <div>
       <h3>Taxon #{props.taxonId}</h3>
-      <UglyRampNoProcessing
+      <MapRawDataOnRamp
         taxonId={props.taxonId}
         width={1237}
         height={1552}

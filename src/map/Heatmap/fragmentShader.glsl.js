@@ -18,7 +18,7 @@ void main(void) {
   vec2 texCoord = position * 0.5 + 0.5;
   vec3 basemapColor = texture2D(uSamplerBaseMap, texCoord).rgb;
   float observationFrequency = sampleObservations(texCoord);
-  float alpha = smoothstep(observationFrequency, 0.0, 0.01)*0.7;
+  float alpha = smoothstep(observationFrequency, 0.0, 0.01)*0.9;
   vec2 rampUv = vec2(clamp(observationFrequency,0.001,0.999), 0.5);
   vec3 observationColor = texture2D(uSamplerColorRamp, rampUv).rgb;
 

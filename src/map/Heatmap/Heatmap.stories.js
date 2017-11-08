@@ -3,9 +3,9 @@ import renderer from 'react-test-renderer'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
 
-import ObservationStaticHeatmap from './ObservationStaticHeatmap'
+import Heatmap from './Heatmap'
 
-storiesOf('Map observations static ', module)
+storiesOf('Map heatmap', module)
   .add('alt', () => {
     return <Map taxonId="0" />
   })
@@ -14,7 +14,7 @@ storiesOf('Map observations static ', module)
 
 const Map = props => {
   return (
-    <ObservationStaticHeatmap
+    <Heatmap
     key={props.taxonId}
       taxonId={props.taxonId}
       width={1237}
