@@ -47,7 +47,7 @@ vec4 BlurH (sampler2D source, vec2 size, vec2 uv, float radius) {
 
         // Hardcoded for radius 20 (normally we input the radius
         // in there), needs to be literal here
-		for (float x = -20.0; x <= 20.0; x++)
+		for (float x = -8.0; x <= 8.0; x++)
 		{
 			A = texture2D(source, uv + vec2(x * width, 0.0));
             weight = SCurve(1.0 - (abs(x) * radiusMultiplier));
@@ -65,7 +65,7 @@ void main()
 {
     vec2 uv = position*0.5+0.5;
     // Apply horizontal blur to final output
-    gl_FragColor = BlurH(iChannel0, iResolution.xy, uv, 20.0);
+    gl_FragColor = BlurH(iChannel0, iResolution.xy, uv, 8.0);
 }
 `
 export default FRAGMENT_SHADER

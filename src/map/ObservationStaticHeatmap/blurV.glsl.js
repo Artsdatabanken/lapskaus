@@ -25,7 +25,7 @@ vec4 BlurV (sampler2D source, vec2 size, vec2 uv, float radius) {
         float weight = 0.0;
         float radiusMultiplier = 1.0 / radius;
 
-        for (float y = -20.0; y <= 20.0; y++)
+        for (float y = -8.0; y <= 8.0; y++)
 		{
 			A = texture2D(source, uv + vec2(0.0, y * height));
            	weight = SCurve(1.0 - (abs(y) * radiusMultiplier));
@@ -41,9 +41,9 @@ vec4 BlurV (sampler2D source, vec2 size, vec2 uv, float radius) {
 
 void main()
 {
-    vec2 uv = position * 0.5 - 0.5;
+    vec2 uv = position * 0.5 + 0.5;
     // Apply vertical blur to buffer A
-	gl_FragColor = BlurV(iChannel0, iResolution.xy, uv, 20.0);
+	gl_FragColor = BlurV(iChannel0, iResolution.xy, uv, 8.0);
 }
 `
 export default FRAGMENT_SHADER
