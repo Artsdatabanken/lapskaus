@@ -1,3 +1,12 @@
+const FRAGMENT_SHADER = `\
+#ifdef GL_ES
+precision highp float;
+#endif
+
+varying vec2 position;
+
+uniform sampler2D iChannel0;
+uniform vec2 iResolution;
 
 float SCurve (float x) {
     // ---- by CeeJayDK
@@ -40,23 +49,23 @@ vec4 BlurH (sampler2D source, vec2 size, vec2 uv, float radius) {
         // in there), needs to be literal here
 		for (float x = -20.0; x <= 20.0; x++)
 		{
-			A = texture(source, uv + vec2(x * width, 0.0));
-            	weight = SCurve(1.0 - (abs(x) * radiusMultiplier));
-            	C += A * weight;
+			A = texture2D(source, uv + vec2(x * width, 0.0));
+            weight = SCurve(1.0 - (abs(x) * radiusMultiplier));
+            C += A * weight;
 			divisor += weight;
 		}
 
 		return vec4(C.r / divisor, C.g / divisor, C.b / divisor, 1.0);
 	}
 
-	return texture(source, uv);
+	return texture2D(source, uv);
 }
 
-
-void mainImage( out vec4 fragColor, in vec2 fragCoord )
+void main()
 {
-    vec2 uv = fragCoord.xy / iResolution.xy;
-
+    vec2 uv = position*0.5+0.5;
     // Apply horizontal blur to final output
-	fragColor = BlurH(iChannel0, iResolution.xy, uv, 20.0);
+    gl_FragColor = BlurH(iChannel0, iResolution.xy, uv, 20.0);
 }
+`
+export default FRAGMENT_SHADER

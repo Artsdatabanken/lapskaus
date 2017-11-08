@@ -43,9 +43,7 @@ void main()
 {
     vec2 uv = position * 0.5 - 0.5;
     // Apply vertical blur to buffer A
-	gl_FragColor = 10.*BlurV(iChannel0, iResolution.xy, uv, 20.0);
-    //        gl_FragColor = vec4(1.,0.,0.,1.);
-            //    gl_FragColor = texture2D(iChannel0, uv);
+	gl_FragColor = BlurV(iChannel0, iResolution.xy, uv, 20.0);
 }
 `
 export default FRAGMENT_SHADER
