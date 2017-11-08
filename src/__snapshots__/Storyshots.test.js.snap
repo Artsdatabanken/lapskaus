@@ -55,63 +55,15 @@ exports[`Storyshots App Bar down into tree 1`] = `
             <div
               className="MuiToolbar-root-38 MuiToolbar-gutters-39"
             >
-              <button
-                aria-label="Back"
-                className="MuiButtonBase-root-49 MuiIconButton-root-40 MuiIconButton-colorContrast-42 AppBarEG-menuButton-3"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="button"
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className="MuiIconButton-label-46"
-                >
-                  <svg
-                    className="MuiIconButton-icon-47"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "rgba(0, 0, 0, 0.87)",
-                        "display": "inline-block",
-                        "fill": "currentColor",
-                        "height": 24,
-                        "muiPrepared": true,
-                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "userSelect": "none",
-                        "width": 24,
-                      }
-                    }
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
-                    />
-                  </svg>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-51"
-                />
-              </button>
+              
               <h2
-                className="MuiTypography-root-58 MuiTypography-title-64 MuiTypography-colorInherit-77 AppBarEG-flex-2"
+                className="MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59 AppBarEG-flex-2"
                 onClick={[Function]}
               >
                 Artstre
               </h2>
               <button
-                className="MuiButtonBase-root-49 MuiButton-root-82 MuiButton-flatContrast-87"
+                className="MuiButtonBase-root-78 MuiButton-root-64 MuiButton-flatContrast-69"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -129,7 +81,7 @@ exports[`Storyshots App Bar down into tree 1`] = `
                 type="button"
               >
                 <span
-                  className="MuiButton-label-84"
+                  className="MuiButton-label-66"
                 >
                   <svg
                     onMouseEnter={[Function]}
@@ -154,7 +106,7 @@ exports[`Storyshots App Bar down into tree 1`] = `
                   </svg>
                 </span>
                 <span
-                  className="MuiTouchRipple-root-51"
+                  className="MuiTouchRipple-root-80"
                 />
               </button>
             </div>
@@ -258,63 +210,15 @@ exports[`Storyshots App Bar root 1`] = `
             <div
               className="MuiToolbar-root-38 MuiToolbar-gutters-39"
             >
-              <button
-                aria-label="Back"
-                className="MuiButtonBase-root-49 MuiIconButton-root-40 MuiIconButton-colorContrast-42 AppBarEG-menuButton-3"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="button"
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className="MuiIconButton-label-46"
-                >
-                  <svg
-                    className="MuiIconButton-icon-47"
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    style={
-                      Object {
-                        "color": "rgba(0, 0, 0, 0.87)",
-                        "display": "inline-block",
-                        "fill": "currentColor",
-                        "height": 24,
-                        "muiPrepared": true,
-                        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                        "userSelect": "none",
-                        "width": 24,
-                      }
-                    }
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
-                    />
-                  </svg>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-51"
-                />
-              </button>
+              
               <h2
-                className="MuiTypography-root-58 MuiTypography-title-64 MuiTypography-colorInherit-77 AppBarEG-flex-2"
+                className="MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59 AppBarEG-flex-2"
                 onClick={[Function]}
               >
                 Artstre
               </h2>
               <button
-                className="MuiButtonBase-root-49 MuiButton-root-82 MuiButton-flatContrast-87"
+                className="MuiButtonBase-root-78 MuiButton-root-64 MuiButton-flatContrast-69"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -332,7 +236,7 @@ exports[`Storyshots App Bar root 1`] = `
                 type="button"
               >
                 <span
-                  className="MuiButton-label-84"
+                  className="MuiButton-label-66"
                 >
                   <svg
                     onMouseEnter={[Function]}
@@ -357,7 +261,7 @@ exports[`Storyshots App Bar root 1`] = `
                   </svg>
                 </span>
                 <span
-                  className="MuiTouchRipple-root-51"
+                  className="MuiTouchRipple-root-80"
                 />
               </button>
             </div>
@@ -758,7 +662,7 @@ exports[`Storyshots Taxon Card default 1`] = `
               >
                 <img
                   alt=""
-                  src="http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/196.jpg"
+                  src="//nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/196.jpg"
                   style={
                     Object {
                       "maxWidth": "100%",
@@ -1079,29 +983,29 @@ exports[`Storyshots Taxon Locations default 1`] = `
     >
       <div>
         <div
-          className="MuiPaper-root-11 MuiPaper-shadow2-15 MuiPaper-rounded-12 TaxonLocations-card-97"
+          className="MuiPaper-root-11 MuiPaper-shadow2-15 MuiPaper-rounded-12 TaxonLocations-card-88"
         >
           <div
-            className="MuiCardContent-root-99"
+            className="MuiCardContent-root-90"
           >
             <h2
-              className="MuiTypography-root-58 MuiTypography-headline-63"
+              className="MuiTypography-root-40 MuiTypography-headline-45"
             >
               Utbredelse
             </h2>
             <p
-              className="MuiTypography-root-58 MuiTypography-body1-67"
+              className="MuiTypography-root-40 MuiTypography-body1-49"
             >
               basert på observasjoner
             </p>
             <div
-              className="MuiTabs-root-100"
+              className="MuiTabs-root-91"
             >
               <div
-                className="MuiTabs-flexContainer-101"
+                className="MuiTabs-flexContainer-92"
               >
                 <div
-                  className="MuiTabs-scrollingContainer-102 MuiTabs-fixed-103"
+                  className="MuiTabs-scrollingContainer-93 MuiTabs-fixed-94"
                   onScroll={[Function]}
                   role="tablist"
                   style={
@@ -1111,11 +1015,11 @@ exports[`Storyshots Taxon Locations default 1`] = `
                   }
                 >
                   <div
-                    className="MuiTabs-flexContainer-101"
+                    className="MuiTabs-flexContainer-92"
                   >
                     <button
                       aria-selected={true}
-                      className="MuiButtonBase-root-49 MuiTab-root-107 MuiTab-rootInherit-115 MuiTab-rootInheritSelected-116"
+                      className="MuiButtonBase-root-78 MuiTab-root-98 MuiTab-rootInherit-106 MuiTab-rootInheritSelected-107"
                       disabled={false}
                       onBlur={[Function]}
                       onClick={[Function]}
@@ -1134,25 +1038,25 @@ exports[`Storyshots Taxon Locations default 1`] = `
                       type="button"
                     >
                       <span
-                        className="MuiTab-wrapper-119"
+                        className="MuiTab-wrapper-110"
                       >
                         <div
-                          className="MuiTab-labelContainer-120"
+                          className="MuiTab-labelContainer-111"
                         >
                           <span
-                            className="MuiTab-label-121"
+                            className="MuiTab-label-112"
                           >
                             Heat map
                           </span>
                         </div>
                       </span>
                       <span
-                        className="MuiTouchRipple-root-51"
+                        className="MuiTouchRipple-root-80"
                       />
                     </button>
                     <button
                       aria-selected={false}
-                      className="MuiButtonBase-root-49 MuiTab-root-107 MuiTab-rootInherit-115"
+                      className="MuiButtonBase-root-78 MuiTab-root-98 MuiTab-rootInherit-106"
                       disabled={false}
                       onBlur={[Function]}
                       onClick={[Function]}
@@ -1171,25 +1075,25 @@ exports[`Storyshots Taxon Locations default 1`] = `
                       type="button"
                     >
                       <span
-                        className="MuiTab-wrapper-119"
+                        className="MuiTab-wrapper-110"
                       >
                         <div
-                          className="MuiTab-labelContainer-120"
+                          className="MuiTab-labelContainer-111"
                         >
                           <span
-                            className="MuiTab-label-121"
+                            className="MuiTab-label-112"
                           >
                             Scatter plot
                           </span>
                         </div>
                       </span>
                       <span
-                        className="MuiTouchRipple-root-51"
+                        className="MuiTouchRipple-root-80"
                       />
                     </button>
                   </div>
                   <div
-                    className="MuiTabIndicator-root-123 MuiTabIndicator-colorAccent-124"
+                    className="MuiTabIndicator-root-114 MuiTabIndicator-colorAccent-115"
                     style={
                       Object {
                         "left": 0,
@@ -1202,7 +1106,7 @@ exports[`Storyshots Taxon Locations default 1`] = `
             </div>
           </div>
           <div
-            className="MuiCardMedia-root-126 TaxonLocations-media-98"
+            className="MuiCardMedia-root-117 TaxonLocations-media-89"
             src={undefined}
             style={undefined}
             title="utbredelse"
@@ -1551,13 +1455,13 @@ exports[`Storyshots Taxon Tree default 1`] = `
     >
       <div>
         <ul
-          className="MuiList-root-128 MuiList-padding-129"
+          className="MuiList-root-119 MuiList-padding-120"
         >
           <div
-            className="MuiListItem-container-133"
+            className="MuiListItem-container-124"
           >
             <li
-              className="MuiButtonBase-root-49 MuiListItem-root-132 MuiListItem-gutters-139 MuiListItem-button-140 MuiListItem-secondaryAction-141 MuiListItem-default-135"
+              className="MuiButtonBase-root-78 MuiListItem-root-123 MuiListItem-gutters-130 MuiListItem-button-131 MuiListItem-secondaryAction-132 MuiListItem-default-126"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1574,41 +1478,41 @@ exports[`Storyshots Taxon Tree default 1`] = `
               tabIndex={0}
             >
               <div
-                className="MuiAvatar-root-142"
+                className="MuiAvatar-root-133"
               >
                 <img
                   alt={undefined}
-                  className="MuiAvatar-img-144"
+                  className="MuiAvatar-img-135"
                   sizes={undefined}
-                  src="http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/1045.jpg"
+                  src="//nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/1045.jpg"
                   srcSet={undefined}
                 />
               </div>
               <div
-                className="MuiListItemText-root-145"
+                className="MuiListItemText-root-136"
               >
                 <h3
-                  className="MuiTypography-root-58 MuiTypography-subheading-65 MuiListItemText-text-148"
+                  className="MuiTypography-root-40 MuiTypography-subheading-47 MuiListItemText-text-139"
                 >
                   Agaricomycetes
                 </h3>
               </div>
               <span
-                className="MuiTouchRipple-root-51"
+                className="MuiTouchRipple-root-80"
               />
             </li>
             <div
-              className="MuiListItemSecondaryAction-root-150"
+              className="MuiListItemSecondaryAction-root-141"
             >
               <div
-                className="MuiChip-root-151"
+                className="MuiChip-root-142"
                 onClick={undefined}
                 onKeyDown={[Function]}
                 role="button"
                 tabIndex={-1}
               >
                 <span
-                  className="MuiChip-label-156"
+                  className="MuiChip-label-147"
                 >
                   494614
                 </span>

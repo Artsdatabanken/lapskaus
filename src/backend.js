@@ -27,21 +27,21 @@ class Backend {
         };
 
         return new Promise((resolve, reject) => {
-        request('http://ogapi.artsdatabanken.no/graph', taxonTreeQuery, variables)
+        request('//ogapi.artsdatabanken.no/graph', taxonTreeQuery, variables)
             .then(json => resolve(json))
         })
     }
 
     static async searchTaxons(searchStr) {
         return new Promise((resolve, reject) => {
-            fetch(`https://artskart.artsdatabanken.no/appapi/api/data/SearchTaxons?maxCount=15&name=${searchStr}`)
+            fetch(`//artskart.artsdatabanken.no/appapi/api/data/SearchTaxons?maxCount=15&name=${searchStr}`)
                 .then(result=>result.json())
                 .then(json => resolve(json))
         })
     }
 
     static getTaxonPhotoUrl(taxonId) {
-        return `http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/${taxonId || 0}.jpg`;
+        return `//nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/${taxonId || 0}.jpg`;
     }
 }
 

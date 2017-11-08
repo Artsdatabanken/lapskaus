@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AppBar from 'material-ui-next/AppBar'
 import IconButton from 'material-ui-next/IconButton'
-import NavigationBack from 'material-ui-icons/ArrowBack'
+import NavigationUp from 'material-ui-icons/ArrowUpward'
 import ActionSearch from 'material-ui-icons/Search'
 import TaxonSearch from '../TaxonSearch/TaxonSearch'
 import Toolbar from 'material-ui-next/Toolbar';
@@ -63,14 +63,15 @@ class AppBarEG extends Component {
                   position="static"
                   >
               <Toolbar>
+                  {this.props.taxon.id ? (
               <IconButton
                   className={this.state.classes.menuButton}
                   color="contrast"
                   aria-label="Back"
                   onClick={() => this.props.onClick(this.props.taxon.parentId)}
                   >
-              <NavigationBack/>
-              </IconButton>
+              <NavigationUp/>
+              </IconButton> ) : ""}
               <Typography
                   type="title"
                   color="inherit"
