@@ -662,7 +662,7 @@ exports[`Storyshots Taxon Card default 1`] = `
               >
                 <img
                   alt=""
-                  src="//nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/196.jpg"
+                  src="http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/196.jpg"
                   style={
                     Object {
                       "maxWidth": "100%",
@@ -1484,7 +1484,7 @@ exports[`Storyshots Taxon Tree default 1`] = `
                   alt={undefined}
                   className="MuiAvatar-img-135"
                   sizes={undefined}
-                  src="//nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/1045.jpg"
+                  src="http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/1045.jpg"
                   srcSet={undefined}
                 />
               </div>
