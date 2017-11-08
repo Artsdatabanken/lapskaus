@@ -30,6 +30,7 @@ class AppBarEG extends Component {
       super(props);
       this.state = {
           classes: props.classes,
+          taxon: props.taxon,
           showSearch: false
       }
   }
@@ -47,7 +48,6 @@ class AppBarEG extends Component {
           this.handleSearchButtonClick();
       }
   };
-
 
   render() {
     return (
@@ -67,7 +67,7 @@ class AppBarEG extends Component {
                   className={this.state.classes.menuButton}
                   color="contrast"
                   aria-label="Back"
-                  onClick={() => this.props.onClick(1)} // todo: goto parent
+                  onClick={() => this.props.onClick(this.props.taxon.parentId)}
                   >
               <NavigationBack/>
               </IconButton>

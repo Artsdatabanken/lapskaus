@@ -3,17 +3,19 @@ import { Card, CardActions, CardMedia, CardTitle } from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 import backend from '../backend'
 
-const TaxonCard = ({ taxonId }) => {
-  const url = backend.getTaxonPhotoUrl(taxonId);
+const TaxonCard = ({ taxon }) => {
+  const url = backend.getTaxonPhotoUrl(taxon.id);
 
   return (
-    <Card>
+    <Card
+        title={"Bildet symboliserer ikke nødvendigvis gjeldende art, men kan være eksempel på underart eller annen nærliggende art. "}
+    >
       <CardMedia
         overlay={
-          <CardTitle title="Vitenskapelig navn" subtitle="Populærnavn" />
+          <CardTitle title={taxon.scientificName} subtitle={taxon.popularName} />
         }
       >
-        <img src={url} alt="" />
+          <img src={url} alt="" />
       </CardMedia>
       <CardActions>
         <FlatButton label="Action1" />

@@ -1,8 +1,33 @@
+import { request } from 'graphql-request'
+
 class Backend {
     static async loadTaxonTree(taxonId) {
+        const taxonTreeQuery = `
+        query treeNodes($ids: [Int]!) {
+            taxonTreeNodes(taxonIds: $ids) {
+            id
+            #count
+            popularName
+            scientificName
+            scientificNameAuthor
+            parentId
+            children {
+              id
+            #count
+              aggreggatedCount
+            #parentId
+              scientificName
+            #scientificNameAuthor
+              popularName
+            }
+          }
+        }`;
+        const variables = {
+            ids: [ taxonId ]
+        };
+
         return new Promise((resolve, reject) => {
-        fetch(`https://artskart.artsdatabanken.no/appapi/api/data/GetTaxonTree?parentTaxonId=${taxonId}`)
-            .then(result=>result.json())
+        request('http://ogapi.artsdatabanken.no/graph', taxonTreeQuery, variables)
             .then(json => resolve(json))
         })
     }
@@ -15,12 +40,8 @@ class Backend {
         })
     }
 
-    static getTaxonLocationsUrl(taxonId) {
-        return `http://nodeyoda.westeurope.cloudapp.azure.com/observation/${taxonId}.png`;
-    }
-
     static getTaxonPhotoUrl(taxonId) {
-        return `http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/${taxonId}.jpg`;
+        return `http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/${taxonId || 0}.jpg`;
     }
 }
 

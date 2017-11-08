@@ -8,8 +8,9 @@ import backend from '../backend'
 
 class TaxonListContainer extends React.Component {
   state = {
-    items: []
-  }
+      taxon: "",
+      children: []
+  };
 
   componentWillReceiveProps(nextProps) {
     this.goFetch(nextProps.match.params.taxon)
@@ -21,12 +22,14 @@ class TaxonListContainer extends React.Component {
 
   goFetch(taxonId) {
     backend.loadTaxonTree(taxonId)
-    .then(items =>
+    .then(data =>
       this.setState({
-        items: items
+          taxon: data.taxonTreeNodes[0],
+          children: data.taxonTreeNodes[0].children
       })
     )
   }
+
 
   handleGoToTaxon(taxon) {
     this.props.history.push(`/taxon/${taxon}`)
@@ -37,15 +40,16 @@ class TaxonListContainer extends React.Component {
       <Grid container spacing={0}>
           <Grid item xs={12}>
             <AppBarEG
+              taxon={this.state.taxon}
               onClick={taxonParentId => this.handleGoToTaxon(taxonParentId)}
             />
           </Grid>
           <Grid item xs={12} sm={6} lg={4}>
-            <TaxonCard taxonId={this.props.match.params.taxon} />
+            <TaxonCard taxon={this.state.taxon} />
           </Grid>
           <Grid item xs={12} sm={6} lg={4}>
             <TaxonTree
-              items={this.state.items}
+              items={this.state.children}
               onClick={taxonId => this.handleGoToTaxon(taxonId)}
             />
           </Grid>
@@ -55,7 +59,6 @@ class TaxonListContainer extends React.Component {
               />
           </Grid>
       </Grid>
-
     )
   }
 }

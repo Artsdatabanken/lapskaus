@@ -6,4 +6,4 @@ import TaxonCard from "./TaxonCard";
 
 storiesOf('Taxon Card', module)
 .addDecorator(muiTheme())
-.add('default', () => <TaxonCard taxonId={196} />)
+.add('default', () => <TaxonCard taxon={{id: 196}} />)

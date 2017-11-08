@@ -11,20 +11,20 @@ function TaxonTree (props) {
                     props.items.map(item=>
                         <ListItem
                             button
-                            key={item.Id}
-                            onClick={() => props.onClick(item.Id)}
+                            key={item.id}
+                            onClick={() => props.onClick(item.id)}
                         >
                             <Avatar
-                                src={backend.getTaxonPhotoUrl(item.Id)}
+                                src={backend.getTaxonPhotoUrl(item.id)}
                             />
 
                             <ListItemText
-                                primary={item.ScientificName}
-                                secondary={item.PopularName}
+                                primary={item.scientificName}
+                                secondary={item.popularName}
                             />
                             <ListItemSecondaryAction>
                                 <Chip
-                                    label={item.CumulativeObservationCount}
+                                    label={item.aggreggatedCount}
                                 />
                             </ListItemSecondaryAction>
                         </ListItem>

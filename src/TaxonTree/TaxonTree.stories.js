@@ -5,13 +5,10 @@ import {muiTheme} from 'storybook-addon-material-ui';
 
 var dummyItems = [
     {
-        "Id": 1,
-        "TaxonCategory": 0,
-        "ScientificNameId": 0,
-        "ScientificName": "Animalia",
-        "PopularName": "dyreriket",
-        "ObservationCount": 8,
-        "CumulativeObservationCount": 18588919
+        "id": 1045,
+        "aggreggatedCount": 494614,
+        "scientificName": "Agaricomycetes",
+        "popularName": null
     }];
 
 storiesOf('Taxon Tree', module)

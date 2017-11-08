@@ -29,8 +29,6 @@ const styles = {
     },
 };
 
-
-    //let url = backend.getTaxonLocationsUrl(props.taxonId);
 class TaxonLocations extends React.Component {
     state = {
         value: 0,

@@ -732,6 +732,7 @@ exports[`Storyshots Taxon Card default 1`] = `
               "zIndex": 1,
             }
           }
+          title="Bildet symboliserer ikke nødvendigvis gjeldende art, men kan være eksempel på underart eller annen nærliggende art. "
         >
           <div
             style={
@@ -822,9 +823,7 @@ exports[`Storyshots Taxon Card default 1`] = `
                             "muiPrepared": true,
                           }
                         }
-                      >
-                        Vitenskapelig navn
-                      </span>
+                      />
                       <span
                         style={
                           Object {
@@ -834,9 +833,7 @@ exports[`Storyshots Taxon Card default 1`] = `
                             "muiPrepared": true,
                           }
                         }
-                      >
-                        Populærnavn
-                      </span>
+                      />
                     </div>
                   </div>
                 </div>
@@ -1583,7 +1580,7 @@ exports[`Storyshots Taxon Tree default 1`] = `
                   alt={undefined}
                   className="MuiAvatar-img-144"
                   sizes={undefined}
-                  src="http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/1.jpg"
+                  src="http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/1045.jpg"
                   srcSet={undefined}
                 />
               </div>
@@ -1593,13 +1590,8 @@ exports[`Storyshots Taxon Tree default 1`] = `
                 <h3
                   className="MuiTypography-root-58 MuiTypography-subheading-65 MuiListItemText-text-148"
                 >
-                  Animalia
+                  Agaricomycetes
                 </h3>
-                <p
-                  className="MuiTypography-root-58 MuiTypography-body1-67 MuiTypography-colorSecondary-79 MuiListItemText-text-148"
-                >
-                  dyreriket
-                </p>
               </div>
               <span
                 className="MuiTouchRipple-root-51"
@@ -1618,7 +1610,7 @@ exports[`Storyshots Taxon Tree default 1`] = `
                 <span
                   className="MuiChip-label-156"
                 >
-                  18588919
+                  494614
                 </span>
               </div>
             </div>
