@@ -11,15 +11,15 @@ uniform sampler2D uSamplerColorRamp;
 
 float sampleObservations(vec2 xy) {
   vec4 c = texture2D(uSamplerObservations, xy);
-  float count = c.r * 256.0 * 256.0 + c.g*256. + c.b;
-  return 0.2*count;
+  float count = c.r*10.;
+  return count;
 }
 
 void main(void) {
   vec2 texCoord = position * 0.5 + 0.5;
   vec3 basemapColor = texture2D(uSamplerBaseMap, texCoord).rgb;
   float observationFrequency = sampleObservations(texCoord);
-  float alpha = smoothstep(observationFrequency, 0.0, 0.001);
+  float alpha = smoothstep(observationFrequency, 0.0, 0.03);
   vec2 rampUv = vec2(clamp(observationFrequency,0.001,0.999), 0.5);
   vec3 observationColor = texture2D(uSamplerColorRamp, rampUv).rgb;
 

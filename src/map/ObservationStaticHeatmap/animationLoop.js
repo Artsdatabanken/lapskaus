@@ -46,11 +46,16 @@ const animationLoop = new AnimationLoop({
       }),
       fbShadow: new Framebuffer(gl, {
         id: 'shadowmap',
+        format: gl.LUMINANCE,
+        type: gl.FLOAT,
         width: texWidth,
         height: texHeight
       }),
       fbShadow2: new Framebuffer(gl, {
         id: 'shadowmap2',
+ //       color: false,
+        format: gl.LUMINANCE,
+       type: gl.FLOAT,
         width: texWidth,
         height: texHeight
       })

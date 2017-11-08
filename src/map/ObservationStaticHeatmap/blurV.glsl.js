@@ -29,7 +29,7 @@ vec4 BlurV (sampler2D source, vec2 size, vec2 uv, float radius) {
 		{
 			A = texture2D(source, uv + vec2(0.0, y * height));
            	weight = SCurve(1.0 - (abs(y) * radiusMultiplier));
-           	C += A * weight;
+           	C += (256.*256.*A.r + 256.*A.g + A.b) * weight;
 			divisor += weight;
 		}
 
