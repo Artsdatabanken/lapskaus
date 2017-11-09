@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardActions, CardMedia, CardTitle } from 'material-ui/Card'
+import { Card, CardMedia, CardTitle } from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 import backend from '../backend'
 
@@ -12,15 +12,11 @@ const TaxonCard = ({ taxon }) => {
     >
       <CardMedia
         overlay={
-          <CardTitle title={taxon.scientificName} subtitle={taxon.popularName} />
+          <CardTitle title={(taxon.scientificName || "") + (taxon.scientificNameAuthor ?  ", " + taxon.scientificNameAuthor : "")} subtitle={taxon.popularName} />
         }
       >
           <img src={url} alt="" />
       </CardMedia>
-      <CardActions>
-        <FlatButton label="Action1" />
-        <FlatButton label="Action2" />
-      </CardActions>
     </Card>
   )
 }

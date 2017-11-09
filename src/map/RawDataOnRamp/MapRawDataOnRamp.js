@@ -41,7 +41,7 @@ MapRawDataOnRamp.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   alpha: PropTypes.number,
-  taxonId: PropTypes.string.isRequired
+  taxonId: PropTypes.number.isRequired
 }
 
 export default MapRawDataOnRamp

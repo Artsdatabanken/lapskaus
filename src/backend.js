@@ -34,7 +34,7 @@ class Backend {
 
     static async searchTaxons(searchStr) {
         return new Promise((resolve, reject) => {
-            fetch(`//artskart.artsdatabanken.no/appapi/api/data/SearchTaxons?maxCount=15&name=${searchStr}`)
+            fetch(`https://artskart.artsdatabanken.no/appapi/api/data/SearchTaxons?maxCount=15&name=${searchStr}`)
                 .then(result=>result.json())
                 .then(json => resolve(json))
         })
