@@ -5,7 +5,7 @@ import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 
 import Scatterplot from './Scatterplot'
 
-storiesOf('Map observations scatterplot ', module)
+storiesOf('Map scatterplot', module)
 .addDecorator(withKnobs)
 .add('alt', () => {
     return (

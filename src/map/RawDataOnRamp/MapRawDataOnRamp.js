@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import animationLoop from './animationLoop'
 
-class Scatterplot extends Component {
+class MapRawDataOnRamp extends Component {
   componentDidMount() {
     this.setProps(this.props)
 //    window.setTimeout(()=>this.stopAnimation(), 5000);
@@ -15,7 +15,7 @@ class Scatterplot extends Component {
   componentWillReceiveProps(nextProps) {
     animationLoop.stop()
     this.setProps(nextProps)
-    animationLoop.start({ canvas: 'map-canvas-scatter' })
+    animationLoop.start({ canvas: 'map-canvas' })
   }
 
   setProps(nextProps) {
@@ -23,11 +23,6 @@ class Scatterplot extends Component {
     animationLoop.filterMin = nextProps.filterMin
     animationLoop.filterMax = nextProps.filterMax
     animationLoop.alpha = nextProps.alpha
-
-    // Reanimate
-    animationLoop.start({ canvas: 'map-canvas-scatter' });
-    window.setTimeout(()=>this.stopAnimation(), 5000);
-
   }
 
   componentWillUnmount() {
@@ -35,18 +30,18 @@ class Scatterplot extends Component {
   }
 
   render() {
-    const {width, height} = this.props;
+    const {width, height} = this.props
     return <div id={this.props.taxonId}>
-        <canvas id="map-canvas-scatter" style={{width: width, height: height}}/>
+        <canvas id="map-canvas" style={{width: width, height: height}}/>
       </div>
   }
 }
 
-Scatterplot.propTypes = {
-  alpha: PropTypes.number,
+MapRawDataOnRamp.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  taxonId: PropTypes.number.isRequired
+  alpha: PropTypes.number,
+  taxonId: PropTypes.string.isRequired
 }
 
-export default Scatterplot
+export default MapRawDataOnRamp

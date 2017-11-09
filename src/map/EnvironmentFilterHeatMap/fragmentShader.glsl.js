@@ -56,7 +56,7 @@ void main(void) {
   float alpha1 =  smoothstep(observationFrequency, 0.0, 0.005) * alphaEnv * alpha;
   vec4 observationColor = texture2D(uSamplerColorRamp,
     vec2(clamp(observationFrequency,0.001,0.999), 0.5));
-    gl_FragColor.rgb = mix(gl_FragColor.rgb, observationColor.rgb, alpha1);
+//    gl_FragColor.rgb = mix(gl_FragColor.rgb, observationColor.rgb, alpha1);
       gl_FragColor.rgb *= 1.-alpha1*(1.-observationColor.rgb);
 }
 `
