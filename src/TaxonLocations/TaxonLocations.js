@@ -3,9 +3,9 @@ import Card, { CardContent, CardMedia } from 'material-ui-next/Card';
 import PropTypes from 'prop-types';
 import Typography from 'material-ui-next/Typography';
 import { withStyles } from 'material-ui-next/styles';
-//import backend from '../backend'
 import EnvironmentFilterHeatMap from "../map/EnvironmentFilterHeatMap/EnvironmentFilterHeatMap";
 import Scatterplot from "../map/Scatterplot/Scatterplot"
+import Heatmap from "../map/Heatmap/Heatmap"
 import Tabs, { Tab } from 'material-ui-next/Tabs';
 
 function TabContainer(props) {
@@ -51,8 +51,9 @@ class TaxonLocations extends React.Component {
                         basert på observasjoner
                     </Typography>
                     <Tabs value={value} onChange={this.handleChange}>
-                        <Tab label="Heat map" />
+                        <Tab label="Heat map 1" />
                         <Tab label="Scatter plot" />
+                        <Tab label="More proper Heat map" />
                     </Tabs>
                 </CardContent>
                 <CardMedia
@@ -62,6 +63,19 @@ class TaxonLocations extends React.Component {
                 >
                     {value === 0 && <TabContainer><EnvironmentFilterHeatMap taxonId={Number(taxonId)} filterMin={0} filterMax={2000} alpha={0.5} width={"100%"} height={"750px"} /></TabContainer>}
                     {value === 1 && <TabContainer><Scatterplot taxonId={Number(taxonId)} filterMin={0} filterMax={2000} alpha={0.5} width={"100%"} height={"750px"}/></TabContainer>}
+                    {value === 2 && <TabContainer>
+                        <Heatmap
+                            key={Number(taxonId)}
+                            taxonId={Number(taxonId)}
+                            width={1237}
+                            height={1552}
+                            amplifyFactor={550}
+                        />
+                    </TabContainer>}
+
+
+
+
                 </CardMedia>
             </Card>
         )

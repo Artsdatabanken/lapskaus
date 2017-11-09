@@ -44,8 +44,8 @@ class Scatterplot extends Component {
 
 Scatterplot.propTypes = {
   alpha: PropTypes.number,
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
   taxonId: PropTypes.number.isRequired
 }
 

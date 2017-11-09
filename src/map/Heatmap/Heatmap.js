@@ -43,7 +43,7 @@ Heatmap.propTypes = {
   amplifyFactor: PropTypes.number,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  taxonId: PropTypes.string.isRequired
+  taxonId: PropTypes.number.isRequired
 }
 
 export default Heatmap

@@ -66,7 +66,6 @@ class AppBarEG extends Component {
                   {this.props.taxon.id ? (
               <IconButton
                   className={this.state.classes.menuButton}
-                  color="contrast"
                   aria-label="Back"
                   onClick={() => this.props.onClick(this.props.taxon.parentId)}
                   >
