@@ -37,15 +37,15 @@ class Scatterplot extends Component {
   render() {
     const {width, height} = this.props;
     return <div id={this.props.taxonId}>
-        <canvas id="map-canvas-scatter" style={{width: width, height: height}}/>
+        <canvas id="map-canvas-scatter" style={{width: width + "px", height: height + "px"}}/>
       </div>
   }
 }
 
 Scatterplot.propTypes = {
   alpha: PropTypes.number,
-  width: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
   taxonId: PropTypes.number.isRequired
 }
 

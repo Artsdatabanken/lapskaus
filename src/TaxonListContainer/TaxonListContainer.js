@@ -53,7 +53,7 @@ class TaxonListContainer extends React.Component {
               onClick={taxonId => this.handleGoToTaxon(taxonId)}
             />
           </Grid>
-          <Grid item xs={12} sm={6} lg={4}>
+          <Grid item xs={12}>
               <TaxonLocations
                   taxonId={this.props.match.params.taxon}
               />

@@ -67,9 +67,10 @@ class AppBarEG extends Component {
               <IconButton
                   className={this.state.classes.menuButton}
                   aria-label="Back"
+                  color="contrast"
                   onClick={() => this.props.onClick(this.props.taxon.parentId)}
                   >
-              <NavigationUp/>
+                  <NavigationUp/>
               </IconButton> ) : ""}
               <Typography
                   type="title"

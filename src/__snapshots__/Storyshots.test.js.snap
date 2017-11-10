@@ -334,8 +334,8 @@ exports[`Storyshots Map environment filtered alt 1`] = `
       id="map-canvas-heatmap"
       style={
         Object {
-          "height": undefined,
-          "width": undefined,
+          "height": "undefinedpx",
+          "width": "undefinedpx",
         }
       }
     />
@@ -367,8 +367,8 @@ exports[`Storyshots Map environment filtered dekkfrøete <200m ASL 1`] = `
       id="map-canvas-heatmap"
       style={
         Object {
-          "height": undefined,
-          "width": undefined,
+          "height": "undefinedpx",
+          "width": "undefinedpx",
         }
       }
     />
@@ -400,8 +400,8 @@ exports[`Storyshots Map environment filtered dekkfrøete >400m ASL 1`] = `
       id="map-canvas-heatmap"
       style={
         Object {
-          "height": undefined,
-          "width": undefined,
+          "height": "undefinedpx",
+          "width": "undefinedpx",
         }
       }
     />
@@ -433,8 +433,8 @@ exports[`Storyshots Map environment filtered fjellbjørk <600m ASL 1`] = `
       id="map-canvas-heatmap"
       style={
         Object {
-          "height": undefined,
-          "width": undefined,
+          "height": "undefinedpx",
+          "width": "undefinedpx",
         }
       }
     />
@@ -450,8 +450,8 @@ exports[`Storyshots Map heatmap alt 1`] = `
     id="map-canvas"
     style={
       Object {
-        "height": 1552,
-        "width": 1237,
+        "height": "1552pxpx",
+        "width": "1237pxpx",
       }
     }
   />
@@ -466,8 +466,8 @@ exports[`Storyshots Map heatmap dekkfrøete 1`] = `
     id="map-canvas"
     style={
       Object {
-        "height": 1552,
-        "width": 1237,
+        "height": "1552pxpx",
+        "width": "1237pxpx",
       }
     }
   />
@@ -482,8 +482,8 @@ exports[`Storyshots Map heatmap fjellbjørk 1`] = `
     id="map-canvas"
     style={
       Object {
-        "height": 1552,
-        "width": 1237,
+        "height": "1552pxpx",
+        "width": "1237pxpx",
       }
     }
   />
@@ -569,8 +569,8 @@ exports[`Storyshots Map scatterplot alt 1`] = `
       id="map-canvas-scatter"
       style={
         Object {
-          "height": 1552,
-          "width": 1237,
+          "height": "1552px",
+          "width": "1237px",
         }
       }
     />
@@ -591,8 +591,8 @@ exports[`Storyshots Map scatterplot dekkfrøete 1`] = `
       id="map-canvas-scatter"
       style={
         Object {
-          "height": 1552,
-          "width": 1237,
+          "height": "1552px",
+          "width": "1237px",
         }
       }
     />
@@ -613,8 +613,8 @@ exports[`Storyshots Map scatterplot fjellbjørk 1`] = `
       id="map-canvas-scatter"
       style={
         Object {
-          "height": 1552,
-          "width": 1237,
+          "height": "1552px",
+          "width": "1237px",
         }
       }
     />
@@ -1022,7 +1022,7 @@ exports[`Storyshots Taxon Locations default 1`] = `
                           <span
                             className="MuiTab-label-112"
                           >
-                            More proper Heat map
+                            Heat map 2
                           </span>
                         </div>
                       </span>
@@ -1041,28 +1041,6 @@ exports[`Storyshots Taxon Locations default 1`] = `
                     }
                   />
                 </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="MuiCardMedia-root-117 TaxonLocations-media-89"
-            src={undefined}
-            style={undefined}
-            title="utbredelse"
-          >
-            <div>
-              <div
-                id={NaN}
-              >
-                <canvas
-                  id="map-canvas-heatmap"
-                  style={
-                    Object {
-                      "height": "750px",
-                      "width": "100%",
-                    }
-                  }
-                />
               </div>
             </div>
           </div>
@@ -1394,13 +1372,13 @@ exports[`Storyshots Taxon Tree default 1`] = `
     >
       <div>
         <ul
-          className="MuiList-root-119 MuiList-padding-120"
+          className="MuiList-root-117 MuiList-padding-118"
         >
           <div
-            className="MuiListItem-container-124"
+            className="MuiListItem-container-122"
           >
             <li
-              className="MuiButtonBase-root-78 MuiListItem-root-123 MuiListItem-gutters-130 MuiListItem-button-131 MuiListItem-secondaryAction-132 MuiListItem-default-126"
+              className="MuiButtonBase-root-78 MuiListItem-root-121 MuiListItem-gutters-128 MuiListItem-button-129 MuiListItem-secondaryAction-130 MuiListItem-default-124"
               disabled={false}
               onBlur={[Function]}
               onClick={[Function]}
@@ -1417,21 +1395,21 @@ exports[`Storyshots Taxon Tree default 1`] = `
               tabIndex={0}
             >
               <div
-                className="MuiAvatar-root-133"
+                className="MuiAvatar-root-131"
               >
                 <img
                   alt={undefined}
-                  className="MuiAvatar-img-135"
+                  className="MuiAvatar-img-133"
                   sizes={undefined}
                   src="http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/1045.jpg"
                   srcSet={undefined}
                 />
               </div>
               <div
-                className="MuiListItemText-root-136"
+                className="MuiListItemText-root-134"
               >
                 <h3
-                  className="MuiTypography-root-40 MuiTypography-subheading-47 MuiListItemText-text-139"
+                  className="MuiTypography-root-40 MuiTypography-subheading-47 MuiListItemText-text-137"
                 >
                   Agaricomycetes
                 </h3>
@@ -1441,17 +1419,17 @@ exports[`Storyshots Taxon Tree default 1`] = `
               />
             </li>
             <div
-              className="MuiListItemSecondaryAction-root-141"
+              className="MuiListItemSecondaryAction-root-139"
             >
               <div
-                className="MuiChip-root-142"
+                className="MuiChip-root-140"
                 onClick={undefined}
                 onKeyDown={[Function]}
                 role="button"
                 tabIndex={-1}
               >
                 <span
-                  className="MuiChip-label-147"
+                  className="MuiChip-label-145"
                 >
                   494614
                 </span>

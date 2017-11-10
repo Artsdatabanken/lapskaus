@@ -17,8 +17,8 @@ const Map = props => {
     <Heatmap
     key={props.taxonId}
       taxonId={props.taxonId}
-      width={1237}
-      height={1552}
+      width={"1237px"}
+      height={"1552px"}
       amplifyFactor={props.amplifyFactor}
     />
   )

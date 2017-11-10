@@ -37,7 +37,7 @@ class EnvironmentFilterHeatMap extends Component {
   render() {
       const {width, height} = this.props;
       return  <div id={this.props.taxonId}>
-        <canvas id="map-canvas-heatmap" style={{width: width, height: height}}/>
+        <canvas id="map-canvas-heatmap" style={{width: width + "px", height: height + "px"}}/>
       </div>
   }
 }
@@ -46,7 +46,8 @@ EnvironmentFilterHeatMap.propTypes = {
   alpha: PropTypes.number,
   taxonId: PropTypes.number,
   filterMin: PropTypes.number,
-  filterMax: PropTypes.number
-}
+  filterMax: PropTypes.number,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired}
 
 export default EnvironmentFilterHeatMap

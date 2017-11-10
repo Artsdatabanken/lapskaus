@@ -11,10 +11,10 @@ import fragmentShader from './fragmentShader.glsl'
 import blurV from './blurV.glsl'
 import blurH from './blurH.glsl'
 
-const texWidth = 1237,
-  texHeight = 1552
+
 
 const animationLoop = new AnimationLoop({
+
   onInitialize({ gl }) {
     setParameters(gl, {
       depthTest: false,
@@ -23,8 +23,7 @@ const animationLoop = new AnimationLoop({
     return loadTextures(gl, {
       urls: [
         'http://nodeyoda.westeurope.cloudapp.azure.com/map/gebco_skyggerelieff2_grey.png',
-        `http://nodeyoda.westeurope.cloudapp.azure.com/observation/${this
-          .taxonId}.png`,
+        `http://nodeyoda.westeurope.cloudapp.azure.com/observation/${this.taxonId}.png`,
         ramp
       ]
     }).then(textures => ({
@@ -48,26 +47,26 @@ const animationLoop = new AnimationLoop({
         id: 'shadowmap',
         format: gl.LUMINANCE,
         type: gl.FLOAT,
-        width: texWidth,
-        height: texHeight
+        width: this.width,
+        height: this.height
       }),
       fbShadow2: new Framebuffer(gl, {
         id: 'shadowmap2',
  //       color: false,
         format: gl.LUMINANCE,
        type: gl.FLOAT,
-        width: texWidth,
-        height: texHeight
+        width: this.width,
+        height: this.height
       })
     }))
   },
   onRender({ gl, fbShadow, fbShadow2, blurH, blurV, square }) {
-    gl.viewport(0, 0, texWidth, texHeight)
+    gl.viewport(0, 0, this.width, this.height)
     clear(gl, { framebuffer: fbShadow, color: [0, 0, 0, 1], depth: false })
 
     blurV
       .setUniforms({
-        iResolution: [texWidth, texHeight],
+        iResolution: [this.width, this.height],
         amplifyFactor: this.amplifyFactor
       })
       .draw({
@@ -77,7 +76,7 @@ const animationLoop = new AnimationLoop({
 
     blurH
       .setUniforms({
-        iResolution: [texWidth, texHeight],
+        iResolution: [this.width, this.height],
         iChannel0: fbShadow.texture
       })
       .draw({

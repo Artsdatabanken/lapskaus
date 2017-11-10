@@ -15,15 +15,22 @@ class Heatmap extends Component {
   componentWillReceiveProps(nextProps) {
     animationLoop.stop()
     this.setProps(nextProps)
-    animationLoop.start({ canvas: 'map-canvas' })
+    animationLoop.start({ canvas: 'map-canvas'})
   }
 
   setProps(nextProps) {
-    animationLoop.taxonId = nextProps.taxonId
+      animationLoop.taxonId = nextProps.taxonId
+      animationLoop.width = nextProps.width
+      animationLoop.height = nextProps.height
     animationLoop.filterMin = nextProps.filterMin
     animationLoop.filterMax = nextProps.filterMax
     animationLoop.alpha = nextProps.alpha
-    animationLoop.amplifyFactor = nextProps.amplifyFactor || 1.
+    animationLoop.amplifyFactor = nextProps.amplifyFactor || 1.0
+
+    // Reanimate
+    animationLoop.start({ canvas: 'map-canvas' });
+    window.setTimeout(()=>this.stopAnimation(), 5000);
+
   }
 
   componentWillUnmount() {
@@ -33,7 +40,7 @@ class Heatmap extends Component {
   render() {
     const {width, height} = this.props
     return <div id={this.props.taxonId}>
-        <canvas id="map-canvas" style={{width: width, height: height}}/>
+        <canvas id="map-canvas" style={{width: width + "px", height: height + "px"}}/>
       </div>
   }
 }
