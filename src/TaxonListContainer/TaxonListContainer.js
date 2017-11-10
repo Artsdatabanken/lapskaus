@@ -5,6 +5,17 @@ import TaxonTree from '../TaxonTree/TaxonTree'
 import TaxonCard from '../TaxonCard/TaxonCard'
 import TaxonLocations from "../TaxonLocations/TaxonLocations";
 import backend from '../backend'
+import Responsive from 'react-responsive';
+
+//const Desktop = props => <Responsive {...props} minWidth={992} />;
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
+//const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
+const Default = props => <Responsive {...props} minWidth={768} />;
+
+const smallWidth = 412;
+const fullWidth = 1237;
+const smallHeight = 517;
+const fullHeight = 1552;
 
 class TaxonListContainer extends React.Component {
   state = {
@@ -30,7 +41,6 @@ class TaxonListContainer extends React.Component {
     )
   }
 
-
   handleGoToTaxon(taxon) {
     this.props.history.push(`/taxon/${taxon}`)
   }
@@ -54,8 +64,12 @@ class TaxonListContainer extends React.Component {
             />
           </Grid>
           <Grid item xs={12}>
-              <TaxonLocations
-                  taxonId={this.props.match.params.taxon}
+              <Default>
+                <TaxonLocations taxonId={this.props.match.params.taxon} width={fullWidth} height={fullHeight}/>
+              </Default>
+              <Mobile>
+                  <TaxonLocations taxonId={this.props.match.params.taxon} width={smallWidth} height={smallHeight}/>
+              </Mobile>
               />
           </Grid>
       </Grid>

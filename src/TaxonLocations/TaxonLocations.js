@@ -7,12 +7,7 @@ import EnvironmentFilterHeatMap from "../map/EnvironmentFilterHeatMap/Environmen
 import Scatterplot from "../map/Scatterplot/Scatterplot"
 import Heatmap from "../map/Heatmap/Heatmap"
 import Tabs, { Tab } from 'material-ui-next/Tabs';
-import Responsive from 'react-responsive';
 
-//const Desktop = props => <Responsive {...props} minWidth={992} />;
-const Mobile = props => <Responsive {...props} maxWidth={767} />;
-//const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
-const Default = props => <Responsive {...props} minWidth={768} />;
 
 function TabContainer(props) {
     return <div>{props.children}</div>;
@@ -37,11 +32,7 @@ const styles = {
 
 class TaxonLocations extends React.Component {
     state = {
-        value: 0,
-        smallWidth: 412,
-        fullWidth: 1237,
-        smallHeight: 517,
-        fullHeight: 1552,
+        value: 0
     };
 
     handleChange = (event, value) => {
@@ -49,8 +40,8 @@ class TaxonLocations extends React.Component {
     };
 
     render() {
-        const {classes, taxonId} = this.props;
-        const {value, smallWidth, fullWidth, smallHeight, fullHeight} = this.state;
+        const {classes, taxonId, width, height} = this.props;
+        const {value} = this.state;
         return (
             <Card className={classes.card}>
                 <CardContent>
@@ -66,7 +57,6 @@ class TaxonLocations extends React.Component {
                         <Tab label="Heat map 2" />
                     </Tabs>
                 </CardContent>
-                <Default>
                     <CardMedia
                         className={classes.media}
                         title="utbredelse"
@@ -74,38 +64,17 @@ class TaxonLocations extends React.Component {
                     >
                         {value === 0 &&
                             <TabContainer>
-                                <EnvironmentFilterHeatMap taxonId={Number(taxonId)} filterMin={0} filterMax={2000} alpha={0.5} width={fullWidth} height={fullHeight} />
+                                <EnvironmentFilterHeatMap taxonId={Number(taxonId)} filterMin={0} filterMax={2000} alpha={0.5} width={width} height={height} />
                             </TabContainer>}
                         {value === 1 &&
                             <TabContainer>
-                                <Scatterplot taxonId={Number(taxonId)} filterMin={0} filterMax={2000} alpha={0.5} width={fullWidth} height={fullHeight}/>
+                                <Scatterplot taxonId={Number(taxonId)} filterMin={0} filterMax={2000} alpha={0.5} width={width} height={height}/>
                             </TabContainer>}
                         {value === 2 &&
                             <TabContainer>
-                                <Heatmap key={Number(taxonId)} taxonId={Number(taxonId)} width={fullWidth} height={fullHeight} amplifyFactor={500} />
+                                <Heatmap key={Number(taxonId)} taxonId={Number(taxonId)} width={width} height={height} amplifyFactor={500} />
                             </TabContainer>}
                     </CardMedia>
-                </Default>
-                <Mobile>
-                    <CardMedia
-                        className={classes.media}
-                        title="utbredelse"
-                        src={"#"}
-                    >
-                        {value === 0 &&
-                        <TabContainer>
-                            <EnvironmentFilterHeatMap taxonId={Number(taxonId)} filterMin={0} filterMax={2000} alpha={0.5} width={smallWidth} height={smallHeight} />
-                        </TabContainer>}
-                        {value === 1 &&
-                        <TabContainer>
-                            <Scatterplot taxonId={Number(taxonId)} filterMin={0} filterMax={2000} alpha={0.5} width={smallWidth} height={smallHeight}/>
-                        </TabContainer>}
-                        {value === 2 &&
-                        <TabContainer>
-                            <Heatmap key={Number(taxonId)} taxonId={Number(taxonId)} width={smallWidth} height={smallHeight} amplifyFactor={500} />
-                        </TabContainer>}
-                    </CardMedia>
-                </Mobile>
             </Card>
         )
     }
