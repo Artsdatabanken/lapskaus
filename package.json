@@ -22,6 +22,7 @@
     "test": "react-scripts test --env=jsdom --coverage",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "eject": "react-scripts eject",
+    "precommit": "lint-staged",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public -o build/storybook"
   },
@@ -32,6 +33,15 @@
     "@storybook/addon-storyshots": "^3.2.14",
     "@storybook/react": "^3.2.13",
     "coveralls": "^3.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2",
     "storybook-addon-material-ui": "^0.8.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/prettier/bin/prettier.js --tab-width 4 --write",
+      "git add"
+    ]
   }
 }
