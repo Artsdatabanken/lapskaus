@@ -9,8 +9,8 @@ storiesOf('Map heatmap', module)
   .add('alt', () => {
     return <Map taxonId="0" />
   })
-  .add('dekkfrøete', () => <Map taxonId="1281" />)
-  .add('fjellbjørk', () => <Map taxonId="138955" amplifyFactor={550} />)
+  .add('dekkfrøete', () => <Map taxonId={1281} />)
+  .add('fjellbjørk', () => <Map taxonId={138955} amplifyFactor={550} />)
 
 const Map = props => {
   return (

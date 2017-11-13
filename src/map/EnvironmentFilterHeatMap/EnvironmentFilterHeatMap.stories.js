@@ -54,7 +54,7 @@ const Map = (props) => {
   >
     <h3>Taxon #{props.taxonId}: range {filterMin}-{filterMax}</h3>
     <EnvironmentFilterHeatMap {...props}
-      alpha={alpha} filterMin={filterMin} filterMax={filterMax}/>
+      alpha={alpha} filterMin={filterMin} filterMax={filterMax} height={textureHeight} width={textureWidth}/>
   </div>
 )
 }

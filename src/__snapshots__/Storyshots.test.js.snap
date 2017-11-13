@@ -334,8 +334,8 @@ exports[`Storyshots Map environment filtered alt 1`] = `
       id="map-canvas-heatmap"
       style={
         Object {
-          "height": "undefinedpx",
-          "width": "undefinedpx",
+          "height": "1552px",
+          "width": "1237px",
         }
       }
     />
@@ -367,8 +367,8 @@ exports[`Storyshots Map environment filtered dekkfrøete <200m ASL 1`] = `
       id="map-canvas-heatmap"
       style={
         Object {
-          "height": "undefinedpx",
-          "width": "undefinedpx",
+          "height": "1552px",
+          "width": "1237px",
         }
       }
     />
@@ -400,8 +400,8 @@ exports[`Storyshots Map environment filtered dekkfrøete >400m ASL 1`] = `
       id="map-canvas-heatmap"
       style={
         Object {
-          "height": "undefinedpx",
-          "width": "undefinedpx",
+          "height": "1552px",
+          "width": "1237px",
         }
       }
     />
@@ -433,8 +433,8 @@ exports[`Storyshots Map environment filtered fjellbjørk <600m ASL 1`] = `
       id="map-canvas-heatmap"
       style={
         Object {
-          "height": "undefinedpx",
-          "width": "undefinedpx",
+          "height": "1552px",
+          "width": "1237px",
         }
       }
     />
@@ -460,7 +460,7 @@ exports[`Storyshots Map heatmap alt 1`] = `
 
 exports[`Storyshots Map heatmap dekkfrøete 1`] = `
 <div
-  id="1281"
+  id={1281}
 >
   <canvas
     id="map-canvas"
@@ -476,7 +476,7 @@ exports[`Storyshots Map heatmap dekkfrøete 1`] = `
 
 exports[`Storyshots Map heatmap fjellbjørk 1`] = `
 <div
-  id="138955"
+  id={138955}
 >
   <canvas
     id="map-canvas"
