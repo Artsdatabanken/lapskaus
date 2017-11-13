@@ -7,7 +7,7 @@ import Heatmap from './Heatmap'
 
 storiesOf('Map heatmap', module)
   .add('alt', () => {
-    return <Map taxonId="0" />
+    return <Map taxonId={0} />
   })
   .add('dekkfrøete', () => <Map taxonId={1281} />)
   .add('fjellbjørk', () => <Map taxonId={138955} amplifyFactor={550} />)

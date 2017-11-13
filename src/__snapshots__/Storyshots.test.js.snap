@@ -444,7 +444,7 @@ exports[`Storyshots Map environment filtered fjellbjørk <600m ASL 1`] = `
 
 exports[`Storyshots Map heatmap alt 1`] = `
 <div
-  id="0"
+  id={0}
 >
   <canvas
     id="map-canvas"
@@ -1052,14 +1052,14 @@ exports[`Storyshots Taxon Locations default 1`] = `
           >
             <div>
               <div
-                id={NaN}
+                id={0}
               >
                 <canvas
                   id="map-canvas-heatmap"
                   style={
                     Object {
-                      "height": "undefinedpx",
-                      "width": "undefinedpx",
+                      "height": "1552px",
+                      "width": "1237px",
                     }
                   }
                 />

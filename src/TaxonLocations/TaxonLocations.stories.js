@@ -5,4 +5,4 @@ import TaxonLocations from './TaxonLocations'
 
 storiesOf('Taxon Locations', module)
 .addDecorator(muiTheme())
-.add('default', () => <TaxonLocations />)
+.add('default', () => <TaxonLocations taxonId={0} width={1237} height={1552}/>)
