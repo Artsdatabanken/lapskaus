@@ -710,6 +710,7 @@ exports[`Storyshots Taxon Card default 1`] = `
               >
                 <img
                   alt=""
+                  onError={[Function]}
                   src="http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/196.jpg"
                   style={
                     Object {
@@ -1418,6 +1419,7 @@ exports[`Storyshots Taxon Tree default 1`] = `
             >
               <div
                 className="MuiAvatar-root-133"
+                onError={[Function]}
               >
                 <img
                   alt={undefined}

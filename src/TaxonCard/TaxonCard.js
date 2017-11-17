@@ -1,23 +1,38 @@
-import React from 'react'
-import { Card, CardMedia, CardTitle } from 'material-ui/Card'
-import backend from '../backend'
+import React from "react";
+import { Card, CardMedia, CardTitle } from "material-ui/Card";
+import backend from "../backend";
+import defaultImage from "../dna.jpg";
+
+const addDefaultSrc = function(ev) {
+    ev.target.src = defaultImage;
+};
 
 const TaxonCard = ({ taxon }) => {
-  const url = backend.getTaxonPhotoUrl(taxon.id);
+    const url = backend.getTaxonPhotoUrl(taxon.id);
 
-  return (
-    <Card
-        title={"Bildet symboliserer ikke nødvendigvis gjeldende art, men kan være eksempel på underart eller annen nærliggende art. "}
-    >
-      <CardMedia
-        overlay={
-          <CardTitle title={(taxon.scientificName || "") + (taxon.scientificNameAuthor ?  ", " + taxon.scientificNameAuthor : "")} subtitle={taxon.popularName} />
-        }
-      >
-          <img src={url} alt="" />
-      </CardMedia>
-    </Card>
-  )
-}
+    return (
+        <Card
+            title={
+                "Bildet symboliserer ikke nødvendigvis gjeldende art, men kan være eksempel på underart eller annen nærliggende art. "
+            }
+        >
+            <CardMedia
+                overlay={
+                    <CardTitle
+                        title={
+                            (taxon.scientificName || "") +
+                            (taxon.scientificNameAuthor
+                                ? ", " + taxon.scientificNameAuthor
+                                : "")
+                        }
+                        subtitle={taxon.popularName}
+                    />
+                }
+            >
+                <img src={url} alt="" onError={addDefaultSrc} />
+            </CardMedia>
+        </Card>
+    );
+};
 
-export default TaxonCard
+export default TaxonCard;

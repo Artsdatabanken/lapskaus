@@ -40,7 +40,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "./node_modules/prettier/bin/prettier.js --tab-width 4 --write",
+      "node ./node_modules/prettier/bin/prettier.js --tab-width 4 --write",
       "git add"
     ]
   }

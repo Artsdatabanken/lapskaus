@@ -1,4 +1,4 @@
-import { request } from 'graphql-request'
+import { request } from "graphql-request";
 
 class Backend {
     static async loadTaxonTree(taxonId) {
@@ -23,26 +23,37 @@ class Backend {
           }
         }`;
         const variables = {
-            ids: [ taxonId ]
+            ids: [taxonId]
         };
 
         return new Promise((resolve, reject) => {
-        request('//ogapi.artsdatabanken.no/graph', taxonTreeQuery, variables)
-            .then(json => resolve(json))
-        })
+            request(
+                "//ogapi.artsdatabanken.no/graph",
+                taxonTreeQuery,
+                variables
+            ).then(json => resolve(json));
+        });
     }
 
     static async searchTaxons(searchStr) {
         return new Promise((resolve, reject) => {
-            fetch(`https://artskart.artsdatabanken.no/appapi/api/data/SearchTaxons?maxCount=15&name=${searchStr}`)
-                .then(result=>result.json())
-                .then(json => resolve(json))
-        })
+            fetch(
+                `https://artskart.artsdatabanken.no/appapi/api/data/SearchTaxons?maxCount=15&name=${
+                    searchStr
+                }`
+            )
+                .then(result => result.json())
+                .then(json => resolve(json));
+        });
     }
 
     static getTaxonPhotoUrl(taxonId) {
-        return `http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/${taxonId || 0}.jpg`;
+        return `http://nodeyoda.westeurope.cloudapp.azure.com/taxonPhoto/${taxonId ||
+            0}.jpg`;
+    }
+    static getDefaultPhotoUrl() {
+        return `../dna.jpg`;
     }
 }
 
-export default Backend
+export default Backend;
