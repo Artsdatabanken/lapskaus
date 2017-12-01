@@ -34,7 +34,7 @@
     "@storybook/react": "^3.2.13",
     "coveralls": "^3.0.0",
     "husky": "^0.14.3",
-    "lint-staged": "^5.0.0",
+    "lint-staged": "^6.0.0",
     "prettier": "^1.8.2",
     "storybook-addon-material-ui": "^0.8.2"
   },
